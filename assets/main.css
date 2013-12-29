@@ -1,0 +1,10 @@
+h2 {
+  font-weight: 100;
+  font-size: 40pt; }
+
+.hidden {
+  display: none; }
+
+#intro {
+  background: url(images/conf_bg.png) 50% -25px no-repeat fixed;
+  background-color: #000; }
