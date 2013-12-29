@@ -1,15 +1,233 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauren Tsung</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
   <style>
-    h1 {
-      font-family: Helvetica, sans-serif;
-      font-weight: 100;
+	  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    line-height: 1.7em;
+}
+
+.l-box {
+    padding: 1em;
+}
+
+.header {
+    margin: 0 0;
+}
+
+    .header .pure-menu {
+        padding: 0.5em;
     }
+
+        .header .pure-menu li a:hover,
+        .header .pure-menu li a:focus {
+            background: none;
+            border: none;
+            color: #aaa;
+        }
+
+body .primary-button {
+    background: #02a6eb;
+    color: #fff;
+}
+
+.splash {
+    margin: 2em auto 0;
+    padding: 3em 0.5em;
+    background: #eee;
+}
+    .splash .splash-head {
+        font-size: 300%;
+        margin: 0em 0;
+        line-height: 1.2em;
+    }
+    .splash .splash-subhead {
+        color: #999;
+        font-weight: 300;
+        line-height: 1.4em;
+    }
+    .splash .primary-button {
+        font-size: 150%;
+    }
+
+
+.content .content-subhead {
+    color: #999;
+    padding-bottom: 0.3em;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+}
+
+.content .content-ribbon {
+    margin: 3em;
+    border-bottom: 1px solid #eee;
+}
+
+.ribbon {
+    background: #eee;
+    text-align: center;
+    padding: 2em;
+    color: #999;
+}
+    .ribbon h2 {
+        display: inline;
+        font-weight: normal;
+    }
+
+.footer {
+    background: #111;
+    color: #666;
+    text-align: center;
+    padding: 1em;
+    font-size: 80%;
+}
+
   </style>
 </head>
-
 <body>
-  <h1>This site is under construction.</h1>
-</body>
 
+<div class="content">
+  <div class="header">
+    <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+      <a class="pure-menu-heading" href="">Your Site</a>
+        <ul>
+          <li class="pure-menu-selected"><a href="#">Home</a></li>
+          <li><a href="#">Tour</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="splash">
+        <div class="pure-g-r">
+            <div class="pure-u-1-3">
+                <div class="l-box splash-image">
+                    <img src="http://placehold.it/500x350"
+                         alt="Placeholder image for example.">
+                </div>
+            </div>
+
+            <div class="pure-u-2-3">
+                <div class="l-box splash-text">
+                    <h1 class="splash-head">
+                        Some big bold text.
+                    </h1>
+
+                    <h2 class="splash-subhead">
+                        The HTML and CSS for this layout show how you can make a modern, responsive landing page for your next product. Browse through the source to see how we use menus and responsive grids to create this layout. Shrink your browser width and watch the layout transform and play nice with small screens.
+                    </h2>
+
+                    <p>
+                        <a href="#" class="pure-button primary-button">Get Started</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="pure-g-r content-ribbon">
+            <div class="pure-u-2-3">
+                <div class="l-box">
+                    <h4 class="content-subhead">Some small text</h4>
+
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>
+                        Pellentesque hendrerit lobortis ornare. Fusce luctus imperdiet consequat. Nullam quis nunc quis ligula luctus vestibulum non quis libero. Suspendisse tristique nisl ut velit facilisis sit amet lobortis nulla pharetra.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <div class="l-box">
+                    <img src="http://placehold.it/400x250"
+                         alt="Placeholder image for example.">
+                </div>
+            </div>
+        </div>
+
+        <div class="pure-g-r content-ribbon">
+            <div class="pure-u-1-3">
+                <div class="l-box">
+                    <img src="http://placehold.it/400x250"
+                         alt="Placeholder image for example.">
+                </div>
+            </div>
+
+            <div class="pure-u-2-3">
+                <div class="l-box">
+                    <h4 class="content-subhead">Some more small text</h4>
+
+                    <h3>Etiam iaculis iaculis lobortis.</h3>
+                    <p>
+                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. Morbi fermentum dui sit amet libero tincidunt rutrum. Nam sodales consequat metus sed accumsan.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pure-g-r">
+            <div class="pure-u-1-4">
+                <div class="l-box">
+                    <h3>Subheading</h3>
+                    <p>
+                        Donec suscipit, risus vel venenatis ornare, nibh massa ultrices diam, a elementum metus felis sit amet eros. Phasellus pellentesque euismod massa sed pellentesque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-4">
+                <div class="l-box">
+                    <h3>Subheading</h3>
+                    <p>
+                        Donec suscipit, risus vel venenatis ornare, nibh massa ultrices diam, a elementum metus felis sit amet eros. Phasellus pellentesque euismod massa sed pellentesque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-4">
+                <div class="l-box">
+                    <h3>Subheading</h3>
+                    <p>
+                        Donec suscipit, risus vel venenatis ornare, nibh massa ultrices diam, a elementum metus felis sit amet eros. Phasellus pellentesque euismod massa sed pellentesque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-4">
+                <div class="l-box">
+                    <h3>Subheading</h3>
+                    <p>
+                        Donec suscipit, risus vel venenatis ornare, nibh massa ultrices diam, a elementum metus felis sit amet eros. Phasellus pellentesque euismod massa sed pellentesque.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="l-box ribbon">
+            <h2>Get started now.</h2>
+            <a href="#" class="pure-button primary-button">Sign up</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        View the source of this layout to learn more. Made with love by the YUI Team.
+    </div>
+  </div>
+
+</body>
 </html>
