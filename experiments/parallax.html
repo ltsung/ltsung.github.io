@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Scrolldeck Parallax Plugin Demo</title>
+
+<link href="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/style.css" rel="stylesheet" type="text/css" />
+<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery-1.8.2.min.js"></script>
+<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrollTo-1.4.3.1.min.js"></script>
+<script type="text/javascript" src="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/scripts/jquery.parallax-1.1.js"></script>
+<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.easing.1.3.js"></script>
+<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrollorama.js"></script>
+<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrolldeck.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//$('#nav').localScroll(800);
+	
+	RepositionNav();
+	
+	$(window).resize(function(){
+		RepositionNav();
+	});	
+	
+	//.parallax(xPosition, adjuster, inertia, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//adjuster - y position to start from
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0, .03, true);
+	$('#second').parallax("50%", 0, 0.1, true);
+	$('#third').parallax("50%", 2750, 0.3, true);
+	
+	/*
+	var deck = new $.scrolldeck({
+		slides: '.slide',
+		buttons: '#nav li a',
+		easing: 'easeInOutExpo'
+	});
+    */
+})
+</script>
+  <style>
+     @font-face {
+  	  font-family: Myriad_Pro_Condensed;
+	  src: url('MyriadPro-Cond.otf');
+     }
+  
+     h1 {
+	  font-size: 35pt;
+	  font-family: Myriad_Pro_Condensed, "Proxima Nova", Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  color: #000;
+	  margin-top: 30px;
+    }
+
+    h2 {
+	  font-size: 60pt;
+	  font-family: "League Gothic", "Proxima Nova", Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  /*text-shadow: 1px 1px 0 #000;*/
+    }
+    .hidden {
+	  display: none;
+    }
+    
+    #intro {
+      top: 18px;
+      position: relative;
+      background:url(images/2.jpeg) 20% -25px no-repeat fixed;
+  	  background-color: #000;
+  	  height: 680px;  	  
+	  padding: 0;
+	}
+	
+    #second{
+  	  background:url(images/conf_bg.png) 50% -25px no-repeat fixed;
+  	  background-color: #000;  	  
+	}
+	
+	.story .float-left, .story .float-right {
+	  padding: 0;
+	}
+    
+    
+  </style>
+
+</head>
+
+<body>
+  <!--
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"></a></li>
+	    <li><a href="#second" title="Next Section"></a></li>
+	    <li><a href="#third" title="Next Section"></a></li>
+	</ul>-->
+	
+	<div style="height: 90px; padding-left: 40px; border-top: 7px solid #000;">
+	  <h1>Lauren Tsung</h1>
+	</div>
+	
+	<div id="intro" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+			<h2></h2>
+	        
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	
+	<div id="second" class="slide">
+		<div class="story">
+	    	<div class="float-right">
+	            <h2></h2>
+	            
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#second-->
+	
+	<div id="third" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	        	<h2></h2>
+	            
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#third-->
+
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+var haikus = [
+  [
+    [["I"], ["re","i","ma","gine"]],
+    [["us","er"], ["ex", "pe", "ri", "en", "ces"]],
+    [["with"], ["de","sign"], ["and"], ["code."]]
+  ],
+  [
+    [["I"], ["share"], ["my"], ["les", "sons"]],
+    [["in"], ["U", "X"], ["pro", "to", "ty", "ping"]],
+    [["to"], ["prompt"], ["re", "flec", "tion"]]
+  ],
+  [
+    [["I"], ["solve"], ["for"], ["pro", "blems"]],
+    [["that"], ["can"], ["scale"], ["and"], ["mo", "ne", "tize"]],
+    [["a", "cross"], ["de", "vi", "ces"]]
+  ],
+  [
+    [["My"], ["in", "spi", "ra", "tion"]],
+    [["from"], ["e", "ve", "ry", "day"], ["mo", "ments"]],
+    [["drives"], ["my"], ["per", "spec", "tive"]]
+  ]
+];
+
+var haiku = d3.select("body").selectAll("h2")
+  .data(haikus)
+  //.enter().append("h2")
+  .attr("class", "haiku");
+
+var line = haiku.selectAll(".haiku .line")
+  .data(function(d) {return d;})   
+  .enter().append("div")
+  .attr("class", "line")
+  .attr("data-index", function (d, i) { return i; })
+  .style("margin-bottom", "10px");
+  
+var word = line.selectAll(".word")
+  .data(function(d, i) { return d; })
+  .enter().append("span")
+  .attr("class", "word")
+  .style("padding", "7px");
+
+var sylIndex = 0;
+var syllable = word.selectAll(".syllable")
+  .data(function(d, i) { return d; })
+  .enter().append("span")
+  .attr("class", "syllable")
+  .text(function(d,i) { 
+    return d;
+  })
+  .insert("span")
+    .attr("class", "syl-index hidden")
+    .text(function(d, i, j) {
+      var line = ((this.parentNode).parentNode).parentNode;
+      var lineIndex = parseInt(line.getAttribute("data-index"));
+      
+      if (sylIndex == 17) {
+	    sylIndex = 0;
+      }
+     
+      ++sylIndex;
+       
+      switch(lineIndex) {
+        case 0:
+          return sylIndex;
+        case 1:
+          return sylIndex-5; 
+        case 2:
+           return sylIndex-12;
+        default:
+          return sylIndex;
+      }
+    });
+
+haiku.on("mouseover", function() {      
+        d3.select(this).selectAll(".syllable").transition().ease("linear")
+          .duration(100)
+          .style("margin-right", "4px")
+          .style("border-top", "1px solid #FFF");
+         
+        d3.select(this).selectAll(".syl-index").attr("class", "syl-index")
+          .style("position", "relative")
+          .style("top", "-80px")
+          .style("left", function(d) {
+            var width = (this.parentNode).offsetWidth;
+            width /= 2;
+            width *= -1;
+            return width + "px";  
+         })
+         .style("font-size", "15px");
+       })
+      .on("mouseout", function() {
+        d3.select(this).selectAll(".syl-index").attr("class", "syl-index hidden")
+          .style("position", "relative")
+          .style("top", "0")
+          .style("left", "0")
+          .style("font-size", "15px");
+    
+        d3.select(this).selectAll(".syllable").transition().ease("linear")
+          .duration(300)
+          .style("margin-right", "0px")
+          .style("border-top", "none");
+        });
+</script>	
+
+</body>
+</html>
