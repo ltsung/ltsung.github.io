@@ -6,19 +6,16 @@
 <title>jQuery Scrolldeck Parallax Plugin Demo</title>
 
 <link href="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/style.css" rel="stylesheet" type="text/css" />
-<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery-1.8.2.min.js"></script>
-<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrollTo-1.4.3.1.min.js"></script>
-<script type="text/javascript" src="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/scripts/jquery.parallax-1.1.js"></script>
-<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.easing.1.3.js"></script>
-<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrollorama.js"></script>
-<script src="http://johnpolacek.github.io/scrolldeck.js/js/jquery.scrolldeck.js"></script>
 
 <link rel="stylesheet" href="../assets/fonts/webfonts/ss-social-regular.css">
 
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/scripts/jquery.parallax-1.1.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	//$('#nav').localScroll(800);
-	
+
+
 	RepositionNav();
 	
 	$(window).resize(function(){
@@ -30,9 +27,12 @@ $(document).ready(function(){
 	//adjuster - y position to start from
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('#intro').parallax("20%", 0, .03, true);
-	$('#second').parallax("30%", 0, 0.2, true);
-	$('#third').parallax("0%", 0, 0.3, true);
+	$('#first').parallax("50%", 10, 0.3, true);
+	$('#second').parallax("50%", 10, 0.3, true);
+	$('#third').parallax("50%", 10, 0.3, true);
+	$('#fourth').parallax("50%", 10, 0.3, true);
+	$('#fifth').parallax("50%", 10, 0.3, true);
+
 	
 	/*
 	var deck = new $.scrolldeck({
@@ -49,10 +49,22 @@ $(document).ready(function(){
 	  src: url('MyriadPro-Cond.otf');
      }
      
-     body {
+     body, p {
 	   font-family: "Proxima Nova", Helvetica, sans-serif;
 	   font-size: 20pt;
 	   text-shadow: 1px 1px 0 #000;
+     }
+     
+     a {
+	   color: #ff6392;
+	   text-decoration: none;
+	   border-bottom: 1px dashed #ff6392;
+     }
+     
+     a:hover {
+	   background: #ff6392;
+	   color: #FFF;
+	   text-shadow: none;
      }
      
      .button {
@@ -108,10 +120,12 @@ $(document).ready(function(){
 	  text-shadow: 1px 1px 0 #000;
       color: #FFF;
 	  margin-right: 20px;
+	  border-bottom: none;
     }
 
     #contact-info a:hover {
 	  color: #ff6392;
+	  background: none;
     }
     
     h2 {
@@ -125,19 +139,20 @@ $(document).ready(function(){
 	  display: none;
     }
     
-    #intro {
-      background:url(images/5.jpeg) -10% -25px no-repeat fixed;
-  	  background-color: #000;
+    #first {
+      background:url(images/5.jpeg) 50% 0 no-repeat fixed;
+     /*background-size: 100%;*/
   	  height: 720px;  	  
 	  padding: 0;
+	  color: #FFF;
 	}
 	
-	#intro .story {
+	#first .story {
 	  padding-top: 270px;
 	  margin-left: 50px;
 	}
 	
-	#intro .story .content {
+	#first .story .content {
 	  top: -80px;
 	  right: -800px;
 	  width: 500px;
@@ -145,21 +160,33 @@ $(document).ready(function(){
 	  line-height: 40px;
 	}
 	
-	#intro .story .content .button {
+	#first .story .content .button {
 	  margin-top: 15px;	
 	}
 	
+	#first .story small {
+      font-size: 10pt;
+      top: -65px;
+      position: relative;
+	}
+	
     #second {
-      border-top: 9px solid #3ce0ba;
-  	  background:url(images/1.jpeg) -30% -22px no-repeat;
-  	  background-size: 100%;
-  	  height: 570px; 
+      border-top: 9px solid #3A74B4;
+  	  background:url(images/3.jpeg) 50% 0px no-repeat;
+  	  /*background-size: 100%;*/
+  	  height: 650px; 
 	}
 
 	#second .story {
-	  padding-top: 90px;
+	  padding-top: 190px;
 	  margin-left: 50px;
 	}
+	
+	
+	#second .button {
+	  padding-top: 2px;
+	}
+	
 	
 	.story {
 		min-width: 1200px;
@@ -170,12 +197,42 @@ $(document).ready(function(){
 	}
 	
 	#third {
+      border-top: 9px solid #6B060C;
+  	  background:url(images/2.jpeg) 50% 0px no-repeat;
+  	  /*background-size: 100%;*/
+  	  height: 600px; 
+	}
+	
+	
+	#third .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	}
+	
+
+	#fourth {
       border-top: 9px solid #3ce0ba;
-	  height: 300px;
-	  background-position: 0% 20px !important;
+  	  background:url(images/7.jpeg) 50% 0px no-repeat;
+  	  /*background-size: 100%;*/
+  	  height: 550px; 
 	}
     
+ 	#fourth .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	}    
+	
+	#fifth {
+      border-top: 9px solid #000;
+  	  background:url(images/1.jpeg) 50% 0px no-repeat;
+  	  /*background-size: 100%;*/
+  	  height: 250px; 
+	}
     
+ 	#fifth .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	}    
   </style>
 
 </head>
@@ -199,13 +256,14 @@ $(document).ready(function(){
 	  </div>
 	</div>
 	
-	<div id="intro" class="slide">
+	<div id="first" class="slide">
 		<div class="story">
 	    	<div class="float-left">
 			<h2></h2>
+			<small>Hover over each section header for poetry magic!</small>
 	        
 	    	<div class="content">
-	    	  Lauren is currently a UX Prototyper at Yahoo!, where she develops next-generation advertising experiences across 3 screens.
+	    	  I'm currently a UX Prototyper at <a href="http://www.yahoo.com">Yahoo!</a>, where I develop next-generation advertising experiences across 3 screens at scale.
 	    	  
 	    	  <a href="#" class="button">Download Resume</a>
 
@@ -218,19 +276,56 @@ $(document).ready(function(){
 	    	<div class="float-left">
 	            <h2></h2>
 	            
+	            <div class="content">
+	            
+	            <p>
+	    	  Recently a featured speaker at the <a href="http://yuilibrary.com/yuiconf/2013/schedule/#lauren-tsung">YUI Conference 2013</a>, I shared my insights on the fundamentals of prototyping, where I ask developers to reflect upon their everyday process to craft innovative products.  
+	            </p>
+	            
+	            <p>
+		        I've also been annually invited as a guest speaker for my alma mater, <a href="http://www.calpoly.edu">Cal Poly San Luis Obispo</a>, where I teach HCI and software engineering concepts to computer science students.   
+	            </p>
+	            
+	            <!--
+	            	  <a href="#" class="button"><i class="ss-icon" style="font-size: 30px; margin-right: 15px; top: 5px; position: relative;">&#xF653;</i>Download Deck</a> 
+	            -->
+	            
+	            </div>
 	        </div>
 	    </div> <!--.story-->
 	    
 	</div> <!--#second-->
-	
+
+
 	<div id="third" class="slide">
 		<div class="story">
 	    	<div class="float-left">
-	        	<h2></h2>
+	            <h2></h2>
 	            
 	        </div>
 	    </div> <!--.story-->
+	    
 	</div> <!--#third-->
+
+
+	<div id="fourth" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            <h2></h2>
+	            
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#fourth-->
+
+	<div id="fifth" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            Made with HTML5, SASS, D3, jQuery, and Haiku Poetry.
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#fourth-->
 
 
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
