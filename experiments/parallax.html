@@ -27,9 +27,9 @@ $(document).ready(function(){
 	//adjuster - y position to start from
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('#intro').parallax("50%", 0, .03, true);
-	$('#second').parallax("50%", 0, 0.1, true);
-	$('#third').parallax("50%", 2750, 0.3, true);
+	$('#intro').parallax("20%", 0, .03, true);
+	$('#second').parallax("90%", 0, 0.1, true);
+	$('#third').parallax("20%", 2750, 0.3, true);
 	
 	/*
 	var deck = new $.scrolldeck({
@@ -45,41 +45,67 @@ $(document).ready(function(){
   	  font-family: Myriad_Pro_Condensed;
 	  src: url('MyriadPro-Cond.otf');
      }
+     
+     #header {
+	   height: 90px;
+	   background: rgba(0,0,0,.25);
+	   padding-left: 90px;
+	   border-top: 7px solid #000;
+	   z-index: 999;
+	   position: absolute;
+	   width: 100%;
+     }
   
-     h1 {
+     #header h1 {
 	  font-size: 35pt;
 	  font-family: Myriad_Pro_Condensed, "Proxima Nova", Helvetica, sans-serif;
 	  text-transform: uppercase;
-	  color: #000;
+	  /*color: #ff6392;*/
+	  color: #3ce0ba;
+	 
 	  margin-top: 30px;
+	  
+	  text-shadow: 1px 1px 0 #000;
     }
 
     h2 {
 	  font-size: 60pt;
 	  font-family: "League Gothic", "Proxima Nova", Helvetica, sans-serif;
 	  text-transform: uppercase;
-	  /*text-shadow: 1px 1px 0 #000;*/
+	  text-shadow: 1px 1px 0 #000;
     }
     .hidden {
 	  display: none;
     }
     
     #intro {
-      top: 18px;
-      position: relative;
-      background:url(images/2.jpeg) 20% -25px no-repeat fixed;
+      background:url(images/5.jpeg) 20% -25px no-repeat fixed;
   	  background-color: #000;
-  	  height: 680px;  	  
+  	  height: 720px;  	  
 	  padding: 0;
 	}
 	
+	#intro .story {
+	  padding-top: 250px;
+	  margin-left: 50px;
+	}
+	
     #second{
-  	  background:url(images/conf_bg.png) 50% -25px no-repeat fixed;
-  	  background-color: #000;  	  
+  	  background:url(images/stairs.png) 90% -25px no-repeat fixed;
+  	  background-color: #000;  	 
+  	  height: 400px; 
+	}
+
+	#second .story {
+	  margin-left: 50px;
 	}
 	
 	.story .float-left, .story .float-right {
 	  padding: 0;
+	}
+	
+	#third {
+	  height: 300px;
 	}
     
     
@@ -95,7 +121,7 @@ $(document).ready(function(){
 	    <li><a href="#third" title="Next Section"></a></li>
 	</ul>-->
 	
-	<div style="height: 90px; padding-left: 40px; border-top: 7px solid #000;">
+	<div id="header">
 	  <h1>Lauren Tsung</h1>
 	</div>
 	
@@ -110,7 +136,7 @@ $(document).ready(function(){
 	
 	<div id="second" class="slide">
 		<div class="story">
-	    	<div class="float-right">
+	    	<div class="float-left">
 	            <h2></h2>
 	            
 	        </div>
@@ -133,7 +159,7 @@ $(document).ready(function(){
 
 var haikus = [
   [
-    [["I"], ["re","i","ma","gine"]],
+    [["I"], ["re-","i","ma","gine"]],
     [["us","er"], ["ex", "pe", "ri", "en", "ces"]],
     [["with"], ["de","sign"], ["and"], ["code."]]
   ],
@@ -164,7 +190,7 @@ var line = haiku.selectAll(".haiku .line")
   .enter().append("div")
   .attr("class", "line")
   .attr("data-index", function (d, i) { return i; })
-  .style("margin-bottom", "10px");
+  .style("margin-bottom", "-3px");
   
 var word = line.selectAll(".word")
   .data(function(d, i) { return d; })
@@ -207,12 +233,12 @@ var syllable = word.selectAll(".syllable")
 haiku.on("mouseover", function() {      
         d3.select(this).selectAll(".syllable").transition().ease("linear")
           .duration(100)
-          .style("margin-right", "4px")
-          .style("border-top", "1px solid #FFF");
+          .style("margin-right", "7px");
+          //.style("border-top", "1px solid #FFF");
          
         d3.select(this).selectAll(".syl-index").attr("class", "syl-index")
           .style("position", "relative")
-          .style("top", "-80px")
+          .style("top", "-70px")
           .style("left", function(d) {
             var width = (this.parentNode).offsetWidth;
             width /= 2;
@@ -230,8 +256,8 @@ haiku.on("mouseover", function() {
     
         d3.select(this).selectAll(".syllable").transition().ease("linear")
           .duration(300)
-          .style("margin-right", "0px")
-          .style("border-top", "none");
+          .style("margin-right", "0px");
+          //.style("border-top", "none");
         });
 </script>	
 
