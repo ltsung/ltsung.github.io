@@ -70,6 +70,7 @@ transition: all .1s ease-in;
 	   top: 999;
 	   position: absolute;
 	   width: 100%;
+	   
 	 }
   
      #header h1 {
@@ -79,6 +80,10 @@ transition: all .1s ease-in;
 	  /*color: #ff6392;*/
 	  color: #3ce0ba;
 	  text-shadow: 1px 1px 0 #000;
+    }
+    
+    #header .contact-info {
+	    text-align: right;
     }
     
     #header .contact-info a {
@@ -127,12 +132,20 @@ transition: all .1s ease-in;
   	  height: 720px;  	  
 	  padding: 0;
 	  color: #FFF;
-	  padding-top: 300px;
-	}    
+	  padding-top: 150px;
+	  
+	}
+	
+	h2 {
+		height: 400px;
+			  line-height: 95px;
+
+	}
 
 	.ribbon.problems {     
 	  background: #333;  
 	  color: #FFF;
+	  
 	}    
 	
     .ribbon.teaching {     
@@ -202,7 +215,9 @@ transition: all .1s ease-in;
     <div class="content ribbon intro">
       <div class="pure-g-r">
          <div class="pure-u-1-2">
+            <div class="content">
             <h2></h2>
+            </div>
 			<small>Hover over each section header for poetry magic!</small>
          </div>
          <div class="pure-u-1-2">
@@ -319,17 +334,17 @@ var haikus = [
   [
     [["I"], ["re-","i","ma","gine"]],
     [["us","er"], ["ex", "pe", "ri", "en", "ces"]],
-    [["with"], ["de","sign"], ["and"], ["code."]]
-  ],
-  [
-    [["I"], ["solve"], ["for"], ["pro", "blems"]],
-    [["that"], ["can"], ["scale"], ["and"], ["mo", "ne", "tize"]],
-    [["a", "cross"], ["de", "vi", "ces"]]
+    [["with"], ["de","sign"], ["and"], ["code"]]
   ],
   [
     [["I"], ["share"], ["my"], ["les", "sons"]],
     [["in"], ["U", "X"], ["pro", "to", "ty", "ping"]],
     [["to"], ["prompt"], ["re", "flec", "tion"]]
+  ],
+  [
+    [["I"], ["solve"], ["for"], ["pro", "blems"]],
+    [["that"], ["can"], ["scale"], ["and"], ["mo", "ne", "tize"]],
+    [["a", "cross"], ["de", "vi", "ces"]]
   ],
   [
     [["My"], ["in", "spi", "ra", "tion"]],
@@ -347,8 +362,8 @@ var line = haiku.selectAll(".haiku .line")
   .data(function(d) {return d;})   
   .enter().append("div")
   .attr("class", "line")
-  .attr("data-index", function (d, i) { return i; })
-  .style("margin-bottom", "-3px");
+  .attr("data-index", function (d, i) { return i; });
+  //.style("margin-bottom", "-3px");
   
 var word = line.selectAll(".word")
   .data(function(d, i) { return d; })
@@ -404,6 +419,10 @@ haiku.on("mouseover", function() {
             return width + "px";  
          })
          .style("font-size", "15px");
+        
+        d3.select(this).selectAll(".line").attr("class", "line")
+        .style("margin-bottom", "-20px");                  
+         
        })
       .on("mouseout", function() {
         d3.select(this).selectAll(".syl-index").attr("class", "syl-index hidden")
@@ -416,6 +435,11 @@ haiku.on("mouseover", function() {
           .duration(300)
           .style("margin-right", "0px");
           //.style("border-top", "none");
+          
+          
+        
+        d3.select(this).selectAll(".line").attr("class", "line")
+        .style("margin-bottom", "0");
         });
 </script>	
 
