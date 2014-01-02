@@ -100,7 +100,14 @@ transition: all .1s ease-in;
 	  text-shadow: 1px 1px 0 #000;
     }
     
-
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 160%;
+      color: red;
+      border: 1px solid blue;
+    }
+  }  
+    
   @media screen and (max-width: 480px) {
     h2 {
       font-size: 40%;
@@ -120,7 +127,7 @@ transition: all .1s ease-in;
 	.ribbon.intro { 
 	  
 	  background:#3ce0ba;    
-	  background:url(images/5.jpeg) 50% 0 no-repeat fixed;
+	  /*background:url(images/5.jpeg) 50% 0 no-repeat fixed;*/
   	  height: 720px;  	  
 	  padding: 0;
 	  color: #FFF;
