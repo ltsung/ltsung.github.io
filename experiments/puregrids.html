@@ -11,6 +11,7 @@
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     
   <style>
+
      @font-face {
   	  font-family: Myriad_Pro_Condensed;
 	  src: url('MyriadPro-Cond.otf');
@@ -43,7 +44,7 @@ transition: all .1s ease-in;
      
      .button {
 	   display: block;
-	   width: 200px;
+	   width: 230px;
 	   text-align: center;
 	   padding: 5px 18px 0px 18px;
 	   border: 2px solid #ff6392;
@@ -80,10 +81,13 @@ transition: all .1s ease-in;
 	  /*color: #ff6392;*/
 	  color: #3ce0ba;
 	  text-shadow: 1px 1px 0 #000;
+	  margin-top: 25px;
+	  margin-bottom: 15px;
     }
     
     #header .contact-info {
 	    text-align: right;
+	    margin-top: 25px;
     }
     
     #header .contact-info a {
@@ -105,8 +109,7 @@ transition: all .1s ease-in;
 	  font-size: 280%;
 	  font-family: "League Gothic", "Proxima Nova", Helvetica, sans-serif;
 	  text-transform: uppercase;
-	  text-shadow: 1px 1px 0 #000;
-    }
+	}
     
 
   @media screen and (max-width: 480px) {
@@ -129,34 +132,74 @@ transition: all .1s ease-in;
 	  
 	  background:#3ce0ba;    
 	  background:url(images/5.jpeg) 50% 0 no-repeat fixed;
-  	  height: 720px;  	  
+  	  height: 690px;  	  
 	  padding: 0;
 	  color: #FFF;
 	  padding-top: 150px;
-	  
 	}
+	
+	.ribbon.intro .section {
+	  margin-top: 200px;
+	}
+	
+	.ribbon.intro .section small {
+	  top: -50px;
+	  position: relative;
+	  font-size: 50%;
+	}
+	
+	.ribbon.intro h2 {
+		  text-shadow: 1px 1px 0 #000;
+    
+	}
+	.ribbon.intro .button {
+	   margin-top: 25px;
+    }
+
+
 	
 	h2 {
 		height: 400px;
-			  line-height: 95px;
+			  line-height: 85px;
 
 	}
 
-	.ribbon.problems {     
-	  background: #333;  
-	  color: #FFF;
+	.ribbon.problems {
+	  border-top: 9px solid #3ce0ba;
+	     
+	  background: #222;  
+	  color: #3ce0ba;
 	  
 	}    
 	
     .ribbon.teaching {     
 	  background:#3ce0ba;
-	  color: #FFF;
-	}    
+	  color: #222;
+	}
+	
+	
+	.ribbon.teaching h2 {
+	
+	top: 130px;
+	position: relative;
+	text-shadow: none;
+	
+	}
+	.ribbon.teaching p {
+	
+	  text-shadow: none;
+	}
 	
 	.ribbon.inspiration {     
-	  background:#333;
-	  color: #FFF;
-	}    
+	  background:#222;
+	  color: #3ce0ba;
+	  border-bottom: 1px solid #3ce0ba;
+	} 
+	
+	.content .content-ribbon {
+		margin: 0 1.5em;
+		border: none;
+	}   
   </style>
 
 </head>
@@ -171,7 +214,7 @@ transition: all .1s ease-in;
 
    <div id="header" >
      
-      <div class="pure-g-r">
+      <div class="pure-g-r content-ribbon">
          <div class="pure-u-1-2 title">
             <h1>Lauren Tsung</h1> 
          </div>
@@ -213,11 +256,9 @@ transition: all .1s ease-in;
 -->
 
     <div class="content ribbon intro">
-      <div class="pure-g-r">
-         <div class="pure-u-1-2">
-            <div class="content">
-            <h2></h2>
-            </div>
+      <div class="pure-g-r  content-ribbon">
+         <div class="pure-u-1-2 section">
+              <h2></h2>
 			<small>Hover over each section header for poetry magic!</small>
          </div>
          <div class="pure-u-1-2">
@@ -337,14 +378,15 @@ var haikus = [
     [["with"], ["de","sign"], ["and"], ["code"]]
   ],
   [
-    [["I"], ["share"], ["my"], ["les", "sons"]],
-    [["in"], ["U", "X"], ["pro", "to", "ty", "ping"]],
-    [["to"], ["prompt"], ["re", "flec", "tion"]]
-  ],
-  [
     [["I"], ["solve"], ["for"], ["pro", "blems"]],
     [["that"], ["can"], ["scale"], ["and"], ["mo", "ne", "tize"]],
     [["a", "cross"], ["de", "vi", "ces"]]
+  ],
+
+  [
+    [["I"], ["share"], ["my"], ["les", "sons"]],
+    [["in"], ["U", "X"], ["pro", "to", "ty", "ping"]],
+    [["to"], ["prompt"], ["re", "flec", "tion"]]
   ],
   [
     [["My"], ["in", "spi", "ra", "tion"]],
@@ -411,7 +453,7 @@ haiku.on("mouseover", function() {
          
         d3.select(this).selectAll(".syl-index").attr("class", "syl-index")
           .style("position", "relative")
-          .style("top", "-70px")
+          .style("top", "-65px")
           .style("left", function(d) {
             var width = (this.parentNode).offsetWidth;
             width /= 2;
