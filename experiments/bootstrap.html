@@ -24,21 +24,36 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
-    
-    <style>
-	    #test {
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js""></script>
+<script type="text/javascript" src="http://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#test').parallax("50%", 0.4);
+	
+})
+</script>
+
+<style>
+#test{
+	background: url('./images/conf_bg.png') #000 50% 0 no-repeat fixed;
+	color: white;
 	height: 400px;
-	background: url('./images/conf_bg.png') 50% 0 no-repeat fixed;
-    color: #fff;
-    width: 100%;
-    background-color: #000;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
 }
-    </style>
+	
+	.bleh {
+		height: 500px;
+	}
+	
+</style>
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-
+	
         
     <!-- Carousel
     ================================================== -->
@@ -85,7 +100,9 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 
-<div id="test"></div>
+	<div id="test">	    
+	</div> <!--#second-->
+
 
 
     <!-- Marketing messaging and featurettes
@@ -175,34 +192,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
-    <script src="http://dev.jonraasch.com/scrolling-parallax/examples/js/jquery.scrolling-parallax.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/scripts/jquery.parallax-1.1.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-  $('#test').parallax("50%", 10);
-
-}
-</script>
-
-<script>
-	
 
 
-$(function() {
-    
-    $.scrollingParallax('./images/conf_bg.png', {
-        bgHeight : '250%',
-        staticSpeed : .25,
-        staticScrollLimit : false
-    });
-    
-});
 
 	
 	
