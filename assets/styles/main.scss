@@ -14,6 +14,43 @@
 }
 
 
+#header{
+    border-top: 5px solid #3ce0ba;
+	background-image: url('../images/desk.png');
+	background-color: #000;
+	background-size: 100%;
+	color: #FFF;
+}
+
+#header h2 {
+   color: #3ce0ba;
+}
+
+
+
+.test{
+	background: url('../images/conf_bg.png') #000 30% 0 no-repeat fixed;
+	color: white;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#cooking {
+	background: url('../images/nutmeg.jpg') #000 30% 0 no-repeat fixed;	
+}
+	
+.bleh {
+	height: 300px;
+}
+
+section {
+  border-top: 10px solid #3ce0ba;
+}
+
+	
+
 
 h1 {
   font-size: 300%;
