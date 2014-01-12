@@ -41,10 +41,14 @@ $(document).ready(function(){
 #header{
     border-top: 5px solid #3ce0ba;
     border-bottom: 10px solid #3ce0ba;
-
-	width: 100%;
-	background: url('./assets/images/texture.png');
+	background-image: url('./assets/images/desk.png');
+	background-color: #000;
+	background-size: 100%;
 	color: #FFF;
+}
+
+#header h2 {
+   color: #3ce0ba;
 }
 
 
@@ -56,6 +60,10 @@ $(document).ready(function(){
 	margin: 40px auto;
 	overflow: hidden;
 	padding: 0;
+}
+
+#cooking {
+	background: url('./assets/images/nutmeg.jpg') #000 30% 0 no-repeat fixed;	
 }
 	
 .bleh {
@@ -124,7 +132,7 @@ section {
 	  <div class="row">
 	    <div class="col-md-9">
 		  <h1>Lauren Tsung</h1>
-		  <h2 style="margin-top: 250px;">
+		  <h2 style="margin-top: 350px;">
 			I re-imagine</br>
 			user experiences</br>
 			through design and code.</br>  
@@ -132,7 +140,7 @@ section {
 		</div>
         <div class="col-lg-3">
 		  <p style="margin-top: 15px; text-align: right;">Currently a UX Prototyper at Yahoo! in Advertising User Experience, living in Sunnyvale, CA.</p>
-		  <ul id="contact-info" style="margin-left: -40px; margin-top: 420px; text-align: right;">
+		  <ul id="contact-info" style="margin-left: -40px; margin-top: 520px; text-align: right;">
 		    <li><a href="http://www.twitter.com/ltsung" class="ss-icon">&#xF611;</a></li>
             <li><a href="http://www.linkedin.com/in/laurentsung" class="ss-icon">&#xF612;</a></li>
             <li><a href="http://www.flickr.com/photos/ltsung/" class="ss-icon">&#xF640;</a></li>
@@ -157,6 +165,7 @@ section {
         
         </div>
         <div class="col-md-5">
+        
         </div>
       </div>
   </div>
@@ -175,18 +184,18 @@ section {
         <div class="col-lg-4">
           <img class="featurette-image img-responsive" src="./assets/images/ia_cpt_mocks.png" alt="Generic placeholder image" style="border: 1px solid #3ce0ba;">
           <h3>Experience Design for Infrastructural Engineering</h3>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>I understand the guts of technical scale.  Prior to advertising, I had designed streamlined user flows for complex, information-dense interfaces responsible for large-scale infrastructural problems (e.g. datacenter hardware provisioning to reduce operational expenses and power consumption worldwide).</p>
          
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="featurette-image img-responsive"  src="./assets/images/flickr_burma.png" alt="Generic placeholder image" style="border: 1px solid #3ce0ba;">
           <h3>Cross-screen Monetization Innovation</h3>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p>I investigate, conceptualize, and technically assess next-generation ad formats across screens. Doing this at Yahoo's scale requires collaborating with research and design organizations across the company in order to re-imagine and evaluate meaningful advertising experiences.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="featurette-image img-responsive" src="./assets/images/hyperion.png" alt="Generic placeholder image" style="border: 1px solid #3ce0ba;">
           <h3>Responsive Ad Platform Development</h3>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p>Aside from wearing a design hat, I develop with the latest frontend engineering technologies and standards. As my team is an advertising experience concept group, we are paving the way for streamlining operational inefficiencies that come with creating ad campaigns while making a dent in the responsive web space.</p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
    
@@ -195,17 +204,25 @@ section {
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2>
+                  <h2>
 	        I share my lessons </br>  
 	        in UX prototyping </br>
 	        to prompt reflection	          
-          </h2>
-          
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </h2>  
+
         </div>
+        <div class="col-md-7">
+         <p class="lead">
+	    	  Recently a featured speaker at the <a href="http://yuilibrary.com/yuiconf/2013/schedule/#lauren-tsung">YUI Conference 2013</a>, I shared my insights on the fundamentals of prototyping, where I ask developers to reflect upon their everyday process to craft innovative products.  
+	            
+	            <a href="#" class="button"><i class="ss-icon" style="font-size: 30px; margin-right: 15px; top: 5px; position: relative;">&#xF653;</i>Download Deck</a> 
+	            </p>
+	            
+	            <p class="lead">
+		        I've also been invited as a regular guest speaker for my alma mater, <a href="http://www.calpoly.edu">Cal Poly San Luis Obispo</a>, where I teach HCI and software engineering industry tips to aspiring developers and designers.   
+	            </p>
+
+	    </div>
       </div>
       
   </div>
@@ -218,22 +235,21 @@ section {
 
 
       <div class="row featurette">
-        <div class="col-md-7">
+        <div class="col-md-5">
           <h2>
 	        My inspiration </br>  
 	        from everyday moments </br>
 	        drives my perspective	          
           </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <div class="col-md-7">
+          <p class="lead">Outside of designing and developing for the web, I try to understand the mechanics of everyday life through art and self-tracking. </p>
         </div>
         
       </div>
 
 </div>
-  <div class="test">	    
+  <div id="cooking" class="test">	    
   </div>
 
 
