@@ -1,58 +1,70 @@
-@font-face {
-  font-family: Myriad_Pro_Condensed;
-  src: url('../fonts/MyriadPro-Cond.otf');
+@import 'variables';
+
+// SECTION-SPECIFIC STYLES //////////////////////////////////////////////////
+#header {
+  border-top: 3px solid $green;
+  background-image: url('../images/desk.png');
+  background-color: #000;
+  background-size: 100%;
+  color: #FFF;
+  margin-bottom: 0;
+  
+  h2 {
+    color: $green;
+    margin-top: 350px;
+    margin-bottom: 0;
+  }
+
+  .sum {
+    margin-top: 15px;
+    text-align: right;
+  }
+
+  .contact-info {
+    margin-top: 500px; text-align: right;
+  
+    li {
+      margin-right: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: none;
+      font-size: 200%;
+      color: #FFF;
+  
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
 }
 
-@font-face {
-  font-family: League_Gothic;
-  src: url('../fonts/League-Gothic.otf');
+#work {
+  img {
+    border: 1px solid #777;
+  }
 }
 
-@font-face {
-  font-family: Proxima_Nova_Light;
-  src: url('../fonts/ProximaNova-Light.otf');
-}
-
-
-#header{
-    border-top: 5px solid #3ce0ba;
-	background-image: url('../images/desk.png');
-	background-color: #000;
-	background-size: 100%;
-	color: #FFF;
-   h2 {
-     color: #3ce0ba;
-     margin-bottom: 0;
-   }
-   margin-bottom: 0;
-}
-
-
-
-.test{
-	background: url('../images/conf_bg.png') #000 30% 0 no-repeat fixed;
-	color: white;
-	height: 400px;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
+.test {
+  background: url('../images/conf_bg.png') #000 230% 0 no-repeat fixed;
+  color: white;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
 }
 
 #cooking {
-	background: url('../images/nutmeg.jpg') #000 30% 0 no-repeat fixed;	
-}
-	
-.bleh {
-	height: 300px;
+  background: url('../images/nutmeg.jpg') #000 100% 0 no-repeat fixed;	
 }
 
-section {
-  border-top: 10px solid #3ce0ba;
-  margin-bottom: 20px;
+
+
+// GENERIC STYLES ///////////////////////////////////////////////////////////
+body {
+  font-family: Proxima_Nova_Light;
 }
-
-	
-
 
 h1 {
   font-size: 300%;
@@ -72,10 +84,6 @@ h3 {
   font-family: Proxima_Nova_Light;	
 }
 
-body {
-  font-family: Proxima_Nova_Light;
-}
-
 ul {
   list-style: none;
 }
@@ -84,62 +92,67 @@ ul li {
   display: inline-block;
 }
 
-.hidden {
-  display: none;
-}
-
-#intro{
-	  background:url(images/conf_bg.png) 50% -25px no-repeat fixed;
-	  background-color: #000;
-}
-
-::selection {
-  background: #FF4B5C;
-  color: #FFF;
-}
-
-#contact-info {
-  margin-top: 500px; text-align: right;
-  
-  li {
-	    margin-right: 15px;
-  }
-
-}
-
-#contact-info a {
-  text-decoration: none;
-  border-bottom: none;
-  font-size: 200%;
-  color: #FFF;
-  
-  &:hover {
-	 color: #FF4B5C;
-  }
-}
-
 a {
-  color: #FF4B5C;
+  color: $pink;
+  
+  webkit-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  transition: all .1s ease-in;
   
   &:hover {
-	border-bottom: 1px dashed #FF4B5C;
-	color: #FF4B5C;
+	border-bottom: 1px dashed $pink;
+	color: $pink;
 	text-decoration: none;
   }
 }
 
+section {
+  border-top: 10px solid $green;
+  margin-bottom: 20px;
+}
+
 .sub-sec {
-  border-top: 3px solid #3ce0ba;
+  border-top: 3px solid $green;
   border-bottom: none;
   margin-top: 25px;
   padding: 8px;
   
   h3 {
 	margin-top: 10px;
-	color: #3ce0ba;
+	color: $green;
   }
 }
 
+.button {
+  display: block;
+  width: 230px;
+  text-align: center;
+  padding: 8px 0px 3px 0px;
+  border: 2px solid $pink;
+  font-size: 18pt;
+  color: $pink;
+  text-decoration: none;
+  font-family: Myriad_Pro_Condensed, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+  &:hover {
+    border: 2px solid $pink;
+    background: $pink;
+    color: #FFF;
+  }
+}	
+	
+::selection {
+  background: $pink;
+  color: #FFF;
+}
+
+.hidden {
+  display: none;
+}
 
 .lead:first-child {
   margin-top: 30px;
