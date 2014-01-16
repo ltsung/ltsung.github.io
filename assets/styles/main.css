@@ -176,7 +176,7 @@ section {
   #header .sum, #header .contact-info {
     text-align: left; }
   #header h2 {
-    margin-top: 120px; }
+    margin-top: 90px; }
   #header .contact-info {
     margin-top: 10px;
     margin-left: -55px; }
@@ -191,6 +191,9 @@ section {
   footer .photo-credit {
     text-align: left; } }
 @media screen and (max-width: 480px) {
+  #header h2 {
+    margin-top: 70px; }
+
   h2 {
     font-size: 250%; }
 

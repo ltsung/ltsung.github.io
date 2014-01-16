@@ -240,7 +240,7 @@ section {
     }
     
     h2 {
-	  margin-top: 120px;
+	  margin-top: 90px;
     }
     
     .contact-info {
@@ -269,6 +269,11 @@ section {
 }      
 
 @media screen and (max-width: 480px) {
+  
+  #header h2 {
+	margin-top: 70px;
+  }
+  
   h2 {
 	font-size: 250%;
   }
