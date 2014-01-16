@@ -1,8 +1,11 @@
 @import 'variables';
 
+
 // SECTION-SPECIFIC STYLES //////////////////////////////////////////////////
 #header {
   border-top: 3px solid $green;
+  padding-top: 5px;
+  padding-bottom: 0;
   background-image: url('../images/desk.png');
   background-color: #000;
   background-size: 100%;
@@ -11,8 +14,8 @@
   
   h2 {
     color: $green;
-    margin-top: 350px;
-    margin-bottom: 0;
+    margin-top: 340px;
+    margin-bottom: 20px;
   }
 
   .sum {
@@ -21,10 +24,10 @@
   }
 
   .contact-info {
-    margin-top: 500px; text-align: right;
+    margin-top: 530px; text-align: right;
   
     li {
-      margin-right: 15px;
+      margin-left: 15px;
     }
 
     a {
@@ -41,8 +44,37 @@
 }
 
 #work {
+  padding-bottom: 20px;
+  
   img {
     border: 1px solid #777;
+  }  
+}
+
+#speaking {
+  padding: 0;
+  
+  .container {
+	margin-top: 15px;  
+  }
+  
+  .button {
+	padding-top: 0;
+  }
+}
+
+#inspiration {
+  img {
+	margin-top: 15px;
+  }
+  
+  .sub-sec {
+	border-top: none;
+	margin-top: 0px;
+	
+	img {
+	  margin-bottom: 10px;
+	}
   }
 }
 
@@ -107,9 +139,17 @@ a {
   }
 }
 
+footer {
+  border-top: 3px solid $green;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+  padding-top: 15px;
+  color: $green;
+}
+
 section {
-  border-top: 10px solid $green;
-  margin-bottom: 20px;
+  border-top: 10px solid $green; 
+  padding: 10px 0;
 }
 
 .sub-sec {
