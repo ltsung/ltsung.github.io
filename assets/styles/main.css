@@ -196,7 +196,9 @@ section {
     margin-top: 70px; }
 
   h2 {
-    font-size: 250%; }
+    font-size: 250%;
+    margin-top: 5px;
+    margin-bottom: 5px; }
 
   footer {
     font-size: 65%; } }
