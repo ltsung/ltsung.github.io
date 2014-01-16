@@ -24,7 +24,8 @@
   }
 
   .contact-info {
-    margin-top: 530px; text-align: right;
+    margin-top: 530px;
+    text-align: right;
   
     li {
       margin-left: 15px;
@@ -48,7 +49,17 @@
   
   img {
     border: 1px solid #777;
-  }  
+  }
+  
+  .caveat {
+	font-size: 90%;
+	text-align: right;
+	
+	a {
+	  right: 15px;
+	  position: absolute;	
+	}
+  }
 }
 
 #speaking {
@@ -81,7 +92,7 @@
 .test {
   background: url('../images/conf_bg.png') #000 230% 0 no-repeat fixed;
   color: white;
-  height: 400px;
+  //height: 400px;
   margin: 0 auto;
   overflow: hidden;
   padding: 0;
@@ -91,7 +102,11 @@
   background: url('../images/nutmeg.jpg') #000 100% 0 no-repeat fixed;	
 }
 
-
+footer {
+  .photo-credit {
+    text-align: right;
+  }	
+}
 
 // GENERIC STYLES ///////////////////////////////////////////////////////////
 body {
@@ -196,4 +211,69 @@ section {
 
 .lead:first-child {
   margin-top: 30px;
+}
+
+
+// SPECIAL QUERIES //////////////////////////////////////////////////////////
+
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 350%;
+  }
+    
+  #header {
+    .contact-info {
+	  margin-top: 495px;
+    }
+  }
+  
+  footer {
+	font-size: 87%;
+  }
+}      
+
+
+@media screen and (max-width: 990px) {
+  #header {
+    .sum, .contact-info {
+	   text-align: left;
+    }
+    
+    h2 {
+	  margin-top: 120px;
+    }
+    
+    .contact-info {
+	  margin-top: 10px;
+	  margin-left: -55px;
+    } 
+  }
+  
+  #work {
+    .caveat {
+      font-size: 90%;
+      text-align: left;
+	
+      a {
+	    left: 0;
+	    position: relative;
+	  }
+    }	  
+  }
+      
+  footer {
+    .photo-credit {
+      text-align: left;
+    }	
+  }
+}      
+
+@media screen and (max-width: 480px) {
+  h2 {
+	font-size: 250%;
+  }
+  
+  footer {
+	font-size: 65%;
+  }
 }

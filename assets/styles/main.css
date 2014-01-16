@@ -45,6 +45,12 @@
   padding-bottom: 20px; }
   #work img {
     border: 1px solid #777; }
+  #work .caveat {
+    font-size: 90%;
+    text-align: right; }
+    #work .caveat a {
+      right: 15px;
+      position: absolute; }
 
 #speaking {
   padding: 0; }
@@ -64,13 +70,15 @@
 .test {
   background: url("../images/conf_bg.png") black 230% 0 no-repeat fixed;
   color: white;
-  height: 400px;
   margin: 0 auto;
   overflow: hidden;
   padding: 0; }
 
 #cooking {
   background: url("../images/nutmeg.jpg") black 100% 0 no-repeat fixed; }
+
+footer .photo-credit {
+  text-align: right; }
 
 body {
   font-family: Proxima_Nova_Light; }
@@ -154,3 +162,37 @@ section {
 
 .lead:first-child {
   margin-top: 30px; }
+
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 350%; }
+
+  #header .contact-info {
+    margin-top: 495px; }
+
+  footer {
+    font-size: 87%; } }
+@media screen and (max-width: 990px) {
+  #header .sum, #header .contact-info {
+    text-align: left; }
+  #header h2 {
+    margin-top: 120px; }
+  #header .contact-info {
+    margin-top: 10px;
+    margin-left: -55px; }
+
+  #work .caveat {
+    font-size: 90%;
+    text-align: left; }
+    #work .caveat a {
+      left: 0;
+      position: relative; }
+
+  footer .photo-credit {
+    text-align: left; } }
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 250%; }
+
+  footer {
+    font-size: 65%; } }
