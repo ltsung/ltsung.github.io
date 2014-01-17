@@ -21,7 +21,7 @@
   </head>
   
   <body>
-    <section id="header">
+    <section id="header"><div class="gradient">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -42,7 +42,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div></div>
     </section>
   
     <section id="work">
@@ -176,6 +176,8 @@
     <script type="text/javascript" src="http://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        $('#header').parallax("30%", 0.5);
+
         $('#taj').parallax("30%", 0.5);
         
         $(window).bind("scroll", function() {
