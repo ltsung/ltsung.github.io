@@ -6,8 +6,6 @@
   padding-top: 5px;
   padding-bottom: 0;
   background: url('../images/desk.png') #000 30% 0 no-repeat fixed;
- // background-color: #000;
- // background-size: 100%;
   color: #FFF;
   margin-bottom: 0;
   
@@ -18,7 +16,7 @@
   }
 
   .sum {
-    margin-top: 15px;
+    margin-top: 18px;
     text-align: right;
   }
 
@@ -27,7 +25,7 @@
     text-align: right;
   
     li {
-      margin-left: 15px;
+      margin-left: 20px;
     }
 
     a {
@@ -81,6 +79,10 @@
 	  background: $pink;
     }
   } 
+  
+  .attrib {
+	display: block;
+  }
 }
 
 #inspiration {
@@ -91,6 +93,7 @@
   .sub-sec {
 	border-top: none;
 	margin-top: 0px;
+	padding: 0px 0px 10px 0px;
 	
 	img {
 	  margin-bottom: 10px;
@@ -263,6 +266,10 @@ section {
   }
   
   #work {
+    h2, p {
+	  opacity: 1;
+    }
+  
     .caveat {
       font-size: 90%;
       text-align: left;
@@ -281,11 +288,37 @@ section {
 	   color: #000;
 	 }
   }
+  
+    
+  .sub-sec {
+	padding: 0;
+	opacity: 1;
+  }
+ 
 }      
 
 @media screen and (max-width: 480px) {
+
+  .button {
+	width: 100%;
+  }
+  
+  .lead:first-child {
+    margin-top: 20px;
+  }
+
   #header h2 {
 	margin-top: 70px;
+  }
+  
+  #speaking {
+    .button {
+	  margin-bottom: 0px;
+    }
+    
+    .attrib {
+	  display: none;
+    }
   }
   
   h2 {

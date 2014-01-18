@@ -1,0 +1,14 @@
+{
+  "name": "Lauren Tsung Portfolio",
+  "version": "0.0.0",
+  "description": "My portfolio Gruntfile",
+  "author": "Lauren Tsung",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

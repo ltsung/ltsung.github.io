@@ -24,13 +24,13 @@
     margin-top: 340px;
     margin-bottom: 20px; }
   #header .sum {
-    margin-top: 15px;
+    margin-top: 18px;
     text-align: right; }
   #header .contact-info {
     margin-top: 530px;
     text-align: right; }
     #header .contact-info li {
-      margin-left: 15px; }
+      margin-left: 20px; }
     #header .contact-info a {
       text-decoration: none;
       border-bottom: none;
@@ -62,12 +62,15 @@
     background: rgba(0, 0, 0, 0.3); }
     #speaking .button:hover {
       background: #ff4b5c; }
+  #speaking .attrib {
+    display: block; }
 
 #inspiration img {
   margin-top: 15px; }
 #inspiration .sub-sec {
   border-top: none;
-  margin-top: 0px; }
+  margin-top: 0px;
+  padding: 0px 0px 10px 0px; }
   #inspiration .sub-sec img {
     margin-bottom: 10px; }
 
@@ -192,6 +195,8 @@ section {
     margin-top: 10px;
     margin-left: -55px; }
 
+  #work h2, #work p {
+    opacity: 1; }
   #work .caveat {
     font-size: 90%;
     text-align: left; }
@@ -202,10 +207,25 @@ section {
   #taj {
     background: #000; }
     #taj p:last-child {
-      color: #000; } }
+      color: #000; }
+
+  .sub-sec {
+    padding: 0;
+    opacity: 1; } }
 @media screen and (max-width: 480px) {
+  .button {
+    width: 100%; }
+
+  .lead:first-child {
+    margin-top: 20px; }
+
   #header h2 {
     margin-top: 70px; }
+
+  #speaking .button {
+    margin-bottom: 0px; }
+  #speaking .attrib {
+    display: none; }
 
   h2 {
     font-size: 250%;
