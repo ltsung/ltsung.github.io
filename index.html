@@ -176,6 +176,7 @@
     <script type="text/javascript" src="http://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript">
       
+      function showEffects() {
         if ($(window).width() >= 480) {
           $('#header').parallax("50%", 0.5);
           $('#taj').parallax("50%", 0.5);
@@ -190,25 +191,11 @@
               $(".sub-sec").animate({opacity: 1});
             } 
           });    
-        }
-        
-        $(window).resize(function(){
-          if ($(window).width() >= 480) {
-            $('#header').parallax("50%", 0.5);
-            $('#taj').parallax("50%", 0.5);
-          }
-        
-          if ($(window).width() >= 990) {
-            $(window).bind("scroll", function() {
-              if ($(this).scrollTop() > 50) {
-                $("#work h2, #work p").animate({opacity: 1});
-              }
-              if ($(this).scrollTop() > 500) {
-                $(".sub-sec").animate({opacity: 1});
-              } 
-            });    
-          }
-        });
+        }          
+      }
+      
+      showEffects();
+      $(window).resize(showEffects);
 
     </script>
   </body>
