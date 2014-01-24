@@ -176,12 +176,12 @@
     <script type="text/javascript">
       
       function showEffects() {
-        if ($(window).height() <= 732) {          
-          if ($(window).width() >= 480) {
-            $('#header').parallax("50%", 0.5);
-            $('#taj').parallax("50%", 0.5);
-          }
-            
+        if ($(window).width() >= 480) {
+          $('#header').parallax("50%", 0.5);
+          $('#taj').parallax("50%", 0.5);
+        }
+        
+        if ($(window).height() <= 732) {              
           if ($(window).width() >= 990) {
             $(window).bind("scroll", function() {
               if ($(this).scrollTop() > 50) {
@@ -192,6 +192,9 @@
               } 
             });    
           }
+        }
+        else {
+          $("#work h2, #work p, .sub-sec").css('opacity', '1'); 
         }          
       }
       
