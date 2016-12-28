@@ -7,8 +7,11 @@ $(window).scroll(function(event) {
 
    if (st > lastScrollTop){
        // Down
-       $('.navbar-wrapper').css('position', 'absolute');
-       $('.navbar-wrapper').fadeOut();
+       
+       if (st > 50) {	       
+	       $('.navbar-wrapper').css('position', 'absolute');
+	       $('.navbar-wrapper').fadeOut();
+       }
 
    } else {
       // Up
