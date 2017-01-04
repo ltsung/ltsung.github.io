@@ -1,0 +1,219 @@
+<!--
+  Lauren Tsung 2016
+  Programmed with Twitter Bootstrap, SASS, JS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lauren Tsung's portfolio">
+    <meta name="author" content="Lauren Tsung">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Lauren Tsung</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+  </head>
+  <body id="yai">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="./index.html"><img src="./images/lauren_tsung.png" height="28px"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./downloads/lt_resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Rich Header -->
+    <section class="callout rich-header">
+      <div class="container">
+        <div class="col-sm-6 col-md-6 title">
+          <h1>Creating a Bot Platform at Scale: Yahoo AI Studio</h1>
+          <h4 class="role">Lead Product Designer</h4>        
+        </div>
+        <div class="col-sm-6 col-md-6">
+          <img src="./images/yai_header_comp.png" width="87%">	          	        
+        </div>
+      </div>
+    </section><!-- / Rich Header -->
+
+
+    <section class="container">
+      <div class="row overview">
+        <h2>Project Overview</h2>
+         <p>
+         Since the beginning of 2016, the Yahoo Search organization has been investing in launching bot experiments across Kik and Facebook Messenger (e.g. Yahoo News, MonkeyPet).  The need for standardizing and streamlining bot creation amongst engineers, editors, and scientists arose as well as the ambition to release our in-house technology externally to third party developers.  I took on the role of lead product designer where I partner closely with groups of technology experts to deliver a minimum viable platform that enables an end-to-end workflow of creating rich dialog design and configuring natural language understanding.  Thus far, we’ve shipped a small invite-only beta and currently are iterating on v2 of the platform for wider release.
+         </p>
+      </div>
+    </section>
+
+
+    <div class="container marketing">
+
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">Technology Investigation</h4>
+            <p>As I was onboarding onto the project, I examined the workflow the engineers had created via commandline to understand painpoints around learnability and usability.  I also surveyed competing platforms and technologies to learn the language and constructs.  With my gained understanding, I helped streamline the tools the engineers had mocked up in preparation for an international Hackday.  I helped drive visibility to the platform, which garnered 41 hack submissions across 5 Yahoo offices worldwide.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature a">
+	       	<img src="./images/platform_analysis.png" width="100%">   
+          </div>
+        </div>
+      </section>
+
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature b">
+	        <img src="./images/bot_creation.png" width="90%">   
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">High-Level Creation Flow</h4>
+            <p>I worked with lead engineers in creating a mental model around bots and skills.  We wanted to design a system that encapsulated how various teams could leverage shared logic for concepts such as intents, fulfillment, and card design.  We devised possibilities to package bot logic in terms of Skills and deploy bots across any chat platform in parallel.  Typically I hash out high-level thinking through whiteboarding sessions or diagrams such as on the left to drive discussions with stakeholders.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">MVP Navigation Structure</h4>
+            <p>For our minimum viable platform, I designed a structure that partitions high-level bot call-to-actions and model status from the main work space.  The main navigation is centered around Skills and Dialogs.  We assumed that our Skill Store would be in place for various teams to take advantage of in scaffolding new bot projects.  The idea was to encourage people to “not reinvent the wheel”, yet allow for lightweight editing of skills. Meanwhile, the Dialogs section was meant to contain conversation definitions that were intent-less (e.g. Onboarding, Legal).</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature c">
+	        <img src="./images/yai_nav_arch.png" width="90%">
+          </div>
+        </div>
+      </section>
+
+
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature d">
+	    	<img src="./images/skill_store.png" width="90%">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">The Skill Store</h4>
+            <p>This is a high-fidelity mock of one of our earlier concepts around navigation and importing from a bare bones Skill Store.  I wanted to imply an active community of skill contribution and had gained inspiration from the understood metaphor of previewing and downloading from app stores.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">Parsing the User Utterance</h4>
+            <p>The platform’s ability to tokenize user utterances and enable a bot developer to train the system in recognizing specific entities within a phrase is critical.  Here is one of the earlier explorations around tackling the interaction design for this feature, which works in tandem with choosing similar phrases to streamline training work for the developer.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature e">
+	        <img src="./images/crf.png" width="90%">  
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.container -->
+    
+
+
+
+    <section class="callout reg">
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="feature-cap">
+              <div class="divider white"></div>
+              <h4 class="featurette-heading">Bots and the Yahoo Network</h4>
+            </div>
+            <img class="network" src="./images/y_network.png" width="70%">
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <img class="diagram" src="./images/native_integration.png" width="90%">
+
+            <p>While my primary focus is to lead design for the platform itself, I’ve contributed to discussions on monetization implications for the wider Yahoo network.  Above is an early concept I created demonstrating contextual bot integration on an article level.</p>
+
+          </div>
+        </div>
+        
+      
+                    
+
+
+      </div>
+    </section><!-- / Callout -->
+
+
+    <section class="container">
+      <div class="row overview">
+        <h2>Lessons Learned</h2>
+        
+        <ol class='lessons'>
+          <li>
+            <h4>Drive the discussion through designing the convo starter.</h4>
+	        <p>
+	         I’ve had to navigate many perspectives coming from various engineering teams, scientists, product managers, our technical writer, and editors.  Most of my stakeholders lacked the visual vocabulary to articulate intricate technical details, so I often designed in lower fidelity with them to quickly and iteratively tease out the constraints.
+	        </p>
+          </li>
+          <li>
+            <h4>Lean thinking can still apply to designing platforms.</h4>
+	        <p>
+	         Though it’s presumed that this platform has layers of detail and dependencies, I’ve been focused on uncovering truly critical themes to understand target audience and the competitive strengths of our product.  Much of my insight into framing a narrowed scope for the purposes of learning quickly stemmed from my <a href="./hive.html">Hive project</a>.
+	        </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Related Reading -->
+    <section class="container footer">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <h4 class="featurette-heading">Related Reading</h4>
+        </div>
+        <div class="col-sm-9 col-md-9 article">
+          <a href="./smart-home.html">&#187; Conceptualizing My Smart Home with Amazon Alexa + IOT</a>	        
+        </div>        
+      </div>
+    </section>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/main.js"></script>
+
+  </body>
+</html>

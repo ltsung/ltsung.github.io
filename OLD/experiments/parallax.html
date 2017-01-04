@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Scrolldeck Parallax Plugin Demo</title>
+
+<link href="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="../assets/fonts/webfonts/ss-social-regular.css">
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--
+<script src="http://johnpolacek.github.io/scrolldeck.js/decks/parallax/scripts/jquery.parallax-1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//$('#nav').localScroll(800);
+
+
+	RepositionNav();
+	
+	$(window).resize(function(){
+		RepositionNav();
+	});	
+	
+	//.parallax(xPosition, adjuster, inertia, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//adjuster - y position to start from
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#first').parallax("50%", 10, 0.3, true);
+	$('#second').parallax("50%", 10, 0.3, true);
+	$('#third').parallax("50%", 10, 0.3, true);
+	$('#fourth').parallax("50%", 10, 0.3, true);
+	$('#fifth').parallax("50%", 10, 0.3, true);
+
+	
+	/*
+	var deck = new $.scrolldeck({
+		slides: '.slide',
+		buttons: '#nav li a',
+		easing: 'easeInOutExpo'
+	});
+    */
+})
+</script>
+-->
+  <style>
+     @font-face {
+  	  font-family: Myriad_Pro_Condensed;
+	  src: url('MyriadPro-Cond.otf');
+     }
+     
+     body, p {
+	   font-family: "Proxima Nova", Helvetica, sans-serif;
+	   font-size: 20pt;
+	   text-shadow: 1px 1px 0 #000;
+     }
+     
+     a {
+	   color: #ff6392;
+	   text-decoration: none;
+	   border-bottom: 1px dashed #ff6392;
+	   text-shadow: 1px 1px 0 #111;
+	   
+	   
+       -webkit-transition: all .1s ease-in;
+-moz-transition: all .1s ease-in;
+-o-transition: all .1s ease-in;
+transition: all .1s ease-in;
+     }
+     
+     a:hover {
+	   background: #ff6392;
+	   color: #FFF;
+	   text-shadow: none;
+     }
+     
+     .button {
+	   display: block;
+	   width: 200px;
+	   text-align: center;
+	   padding: 5px 18px 0px 18px;
+	   border: 2px solid #ff6392;
+	   font-size: 18pt;
+	   color: #ff6392;
+	   text-decoration: none;
+	   text-shadow: none;
+	   background: rgba(256,256,256,.85);
+       font-family: Myriad_Pro_Condensed, "Proxima Nova", Helvetica, sans-serif;
+       text-transform: uppercase;
+       
+     }
+     
+     .button:hover {
+	   background: #ff6392;
+	   color: #FFF;
+	   border: 2px solid #FFF;
+     }
+     
+     #header {
+	   height: 90px;
+	   background: rgba(0,0,0,.65);
+	   padding-left: 90px;
+	   border-top: 9px solid #000;
+	   border-bottom: 1px solid #3ce0ba;
+	   z-index: 999;
+	   position: absolute;
+	   width: 100%;
+     }
+  
+     #header h1 {
+	  font-size: 35pt;
+	  font-family: Myriad_Pro_Condensed, "Proxima Nova", Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  /*color: #ff6392;*/
+	  color: #3ce0ba;
+	  margin-top: 23px;
+	  text-shadow: 1px 1px 0 #000;
+    }
+    
+    #contact-info {
+	  top: 24px;
+	  right: 180px;
+	  position: absolute;
+    }
+    
+    #contact-info a {
+	  font-size: 35px;
+	  text-shadow: 1px 1px 0 #000;
+      color: rgba(256, 256, 256, .5);
+	  margin-right: 20px;
+	  border-bottom: none;
+    }
+
+    #contact-info a:hover {
+	  color: #ff6392;
+	  background: none;
+    }
+    
+    h2 {
+	  font-size: 60pt;
+	  font-family: "League Gothic", "Proxima Nova", Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  text-shadow: 1px 1px 0 #000;
+    }
+    
+    .hidden {
+	  display: none;
+    }
+    
+    #first {
+      background:url(images/5.jpeg) 50% 0 no-repeat fixed;
+      background-size: 100%;
+  	  height: 720px;  	  
+	  padding: 0;
+	  color: #FFF;
+	}
+	
+	#first .story {
+	  padding-top: 270px;
+	  margin-left: 50px;
+	}
+	
+	#first .story .content {
+	  top: -80px;
+	  right: -800px;
+	  width: 500px;
+	  position: absolute;
+	  line-height: 40px;
+	  
+	  text-shadow: 1px 1px 4px #000;
+	}
+	
+	
+	#first .story .content .button {
+	  margin-top: 15px;
+	  text-shadow: none;
+	}
+	
+	#first .story small {
+      font-size: 10pt;
+      top: -65px;
+      position: relative;
+	}
+	
+    #second {
+      border-top: 9px solid #3ce0ba;
+  	  background: #222;
+  	  /*background-size: 100%;*/
+  	  height: 650px; 
+	}
+
+	#second .story {
+	  padding-top: 190px;
+	  margin-left: 50px;
+	  color: #3ce0ba;
+	}
+	
+	#second .content {
+	  color: #FFF;
+	}
+	
+		
+	#second .button {
+	  padding-top: 2px;
+	}
+	
+	
+	.story {
+		min-width: 1200px;
+	}
+	
+	.story .float-left, .story .float-right {
+	  padding: 0;
+	}
+	
+	#third {
+  	  background: #3ce0ba;
+  	  /*background-size: 100%;*/
+  	  height: 600px; 
+	}
+	
+	
+	#third .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	  color: #000;
+	}
+
+    #third h2 {
+  	  text-shadow: none;
+
+    }	
+
+	#fourth {
+  	  background:#222;
+  	  /*background-size: 100%;*/
+  	  height: 550px; 
+	}
+    
+ 	#fourth .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	  color: #3ce0ba;
+	}   
+	
+	#fourth .content {
+      color: #FFF;
+	} 
+	
+	#fifth {
+  	  background:#000;
+  	  /*background-size: 100%;*/
+  	  height: 250px; 
+	}
+    
+ 	#fifth .story {
+	  padding-top: 0px;
+	  margin-left: 50px;
+	}    
+  </style>
+
+</head>
+
+<body>
+  <!--
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"></a></li>
+	    <li><a href="#second" title="Next Section"></a></li>
+	    <li><a href="#third" title="Next Section"></a></li>
+	</ul>-->
+	
+	<div id="header">
+	  <h1>Lauren Tsung</h1>
+	  
+	  <div id="contact-info">
+		  <a href="http://www.twitter.com/ltsung" class="ss-icon">&#xF611;</a>
+          <a href="http://www.linkedin.com/in/laurentsung" class="ss-icon">&#xF612;</a>
+          <a href="http://www.flickr.com/photos/ltsung/" class="ss-icon">&#xF640;</a>
+          <a href="https://github.com/ltsung" class="ss-icon">&#xF671;</a>
+	  </div>
+	</div>
+	
+	<div id="first" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+			<h2></h2>
+			<small>Hover over each section header for poetry magic!</small>
+	        
+	    	<div class="content">
+	    	  I'm currently a UX Prototyper at <a href="http://www.yahoo.com">Yahoo!</a>, where I develop next-generation advertising experiences across 3 screens at scale.
+	    	  
+	    	  <a href="#" class="button">Download Resume</a>
+
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	
+	<div id="second" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            <h2></h2>
+	            
+	            <div class="content">
+	            
+	            <p>
+	    	  Recently a featured speaker at the <a href="http://yuilibrary.com/yuiconf/2013/schedule/#lauren-tsung">YUI Conference 2013</a>, I shared my insights on the fundamentals of prototyping, where I ask developers to reflect upon their everyday process to craft innovative products.  
+	            
+	            <a href="#" class="button"><i class="ss-icon" style="font-size: 30px; margin-right: 15px; top: 5px; position: relative;">&#xF653;</i>Download Deck</a> 
+	            </p>
+	            
+	            <p>
+		        I've also been annually invited as a guest speaker for my alma mater, <a href="http://www.calpoly.edu">Cal Poly San Luis Obispo</a>, where I teach HCI and software engineering concepts to computer science students.   
+	            </p>
+	            
+	            	  
+	            
+	            </div>
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#second-->
+
+
+	<div id="third" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            <h2></h2>
+	            
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#third-->
+
+
+	<div id="fourth" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            <h2></h2>
+	            
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#fourth-->
+
+	<div id="fifth" class="slide">
+		<div class="story">
+	    	<div class="float-left">
+	            Made with HTML5, SASS, PureCSS, D3, jQuery, and Haiku Poetry.
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#fourth-->
+
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+var haikus = [
+  [
+    [["I"], ["re-","i","ma","gine"]],
+    [["us","er"], ["ex", "pe", "ri", "en", "ces"]],
+    [["with"], ["de","sign"], ["and"], ["code."]]
+  ],
+  [
+    [["I"], ["share"], ["my"], ["les", "sons"]],
+    [["in"], ["U", "X"], ["pro", "to", "ty", "ping"]],
+    [["to"], ["prompt"], ["re", "flec", "tion"]]
+  ],
+  [
+    [["I"], ["solve"], ["for"], ["pro", "blems"]],
+    [["that"], ["can"], ["scale"], ["and"], ["mo", "ne", "tize"]],
+    [["a", "cross"], ["de", "vi", "ces"]]
+  ],
+  [
+    [["My"], ["in", "spi", "ra", "tion"]],
+    [["from"], ["e", "ve", "ry", "day"], ["mo", "ments"]],
+    [["drives"], ["my"], ["per", "spec", "tive"]]
+  ]
+];
+
+var haiku = d3.select("body").selectAll("h2")
+  .data(haikus)
+  //.enter().append("h2")
+  .attr("class", "haiku");
+
+var line = haiku.selectAll(".haiku .line")
+  .data(function(d) {return d;})   
+  .enter().append("div")
+  .attr("class", "line")
+  .attr("data-index", function (d, i) { return i; })
+  .style("margin-bottom", "-3px");
+  
+var word = line.selectAll(".word")
+  .data(function(d, i) { return d; })
+  .enter().append("span")
+  .attr("class", "word")
+  .style("padding", "7px");
+
+var sylIndex = 0;
+var syllable = word.selectAll(".syllable")
+  .data(function(d, i) { return d; })
+  .enter().append("span")
+  .attr("class", "syllable")
+  .text(function(d,i) { 
+    return d;
+  })
+  .insert("span")
+    .attr("class", "syl-index hidden")
+    .text(function(d, i, j) {
+      var line = ((this.parentNode).parentNode).parentNode;
+      var lineIndex = parseInt(line.getAttribute("data-index"));
+      
+      if (sylIndex == 17) {
+	    sylIndex = 0;
+      }
+     
+      ++sylIndex;
+       
+      switch(lineIndex) {
+        case 0:
+          return sylIndex;
+        case 1:
+          return sylIndex-5; 
+        case 2:
+           return sylIndex-12;
+        default:
+          return sylIndex;
+      }
+    });
+
+haiku.on("mouseover", function() {      
+        d3.select(this).selectAll(".syllable").transition().ease("linear")
+          .duration(100)
+          .style("margin-right", "7px");
+          //.style("border-top", "1px solid #FFF");
+         
+        d3.select(this).selectAll(".syl-index").attr("class", "syl-index")
+          .style("position", "relative")
+          .style("top", "-70px")
+          .style("left", function(d) {
+            var width = (this.parentNode).offsetWidth;
+            width /= 2;
+            width *= -1;
+            return width + "px";  
+         })
+         .style("font-size", "15px");
+       })
+      .on("mouseout", function() {
+        d3.select(this).selectAll(".syl-index").attr("class", "syl-index hidden")
+          .style("position", "relative")
+          .style("top", "0")
+          .style("left", "0")
+          .style("font-size", "15px");
+    
+        d3.select(this).selectAll(".syllable").transition().ease("linear")
+          .duration(300)
+          .style("margin-right", "0px");
+          //.style("border-top", "none");
+        });
+</script>	
+
+</body>
+</html>
