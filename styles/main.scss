@@ -1,6 +1,7 @@
 $brown: #eaac77;
 $dark_blue: #1C1E37;
 $gold: #a68954;
+$light_gray: #EEE;
 
 @font-face {
   font-family: Raleway;
@@ -17,6 +18,30 @@ $gold: #a68954;
   src: url('../fonts/Raleway-Light.ttf');
 }
 
+.view-port:hover {
+  text-decoration: none;
+}
+
+.view-portfolio-icon {
+  display: inline-block;
+  background-image: url('../images/view_portfolio.png');
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  top: 7px;
+}
+
+.port-link {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+
+.close {
+  font-size: 41px !important;
+}
 
 .navbar-brand {
   margin-top: -7px !important;
@@ -41,14 +66,26 @@ $gold: #a68954;
 }
 
 .grow { 
-  transition: all .25s ease-in-out; 
-  opacity: 1;
-    
-  &:hover { 
-    transform: scale(1.025);
-    opacity: 0.8;
-  }
+  transition: all .5s ease-in-out; 
 }
+
+.project-highlight.a:hover {
+  background-image: url('../images/skill_hover.png');
+}
+
+.project-highlight.b:hover {
+  background-image: url('../images/ambience_hover.png');
+}
+
+.project-highlight.c:hover {
+  background-image: url('../images/hive_hover.png');
+}
+
+.project-highlight.d:hover {
+  background-image: url('../images/homepage_hover.png');
+}
+
+
 
 body {
   font-family: Raleway, Helvetica, sans-serif !important;
@@ -73,20 +110,35 @@ strong {
 }
 
 #homepage {
+/*
   background-image: url('../images/home_bg.png');
   background-size: cover;
   background-position: top center;
-  background-color: $dark_blue;
-  color: #FFF;
+*/
 
-  h2 {
-    margin-top: 60px;
+  .callout.rich-header.home .container {
+    padding: 0 100px;	
+  }
+  
+  background-color: #FAFAFA;
+  color: $dark_blue;
+
+  .callout {
+    color: $dark_blue;
+  }
+  
+  .navbar li a {
+	color: $dark_blue !important;
+  }
+  
+  .container.marketing {
+	padding: 0 80px;
   }
 }
 
 #portfolio-index {
   color: #1C1E37;
-  background-color: #EEE;
+  background-color: $light_gray;
   
   nav a {
 	color: #1C1E37 !important;
@@ -200,16 +252,19 @@ strong {
 #yai {
   
   .callout {
+    height: 500px;
+    background-color: #C5A87B;
+	
     &.rich-header {
-	  background-color: #C5A87B;
-	  text-align: center;
+	 
+	 background-size: cover;
+     height: 360px;
 
-	  h1 {
-	    margin-top: 60px;
-	  }
+	 text-align: center;
+
+
     }
 	&.reg {
-      background-color: #9A8C75;
       padding-top: 70px;
 
       .featurette-heading {
@@ -243,8 +298,10 @@ strong {
 #media-proto {
   
   .callout {
+     height: 500px;
+
     &.rich-header {
-	  background-color: #58B1F2;
+	  background-color: #400090;
 	  height: 360px;
     }
   }
@@ -270,10 +327,14 @@ strong {
 }
 
 #hive {
-  
   .callout {
+  
+    height: 500px;
+	background-color: #03D8C3;
+   
+  
     &.rich-header {
-	  background-color: #4AC9AB;
+	  height: 360px;
 	  
 	  .hive-container {
 		 text-align: right;
@@ -283,13 +344,9 @@ strong {
 		text-align: center;
 	  }
 
-	  h1 {
-		margin-top: 60px;  
-	  }
 
     }
 	&.reg {
-      background-color: #349A83;
       padding-top: 70px;
       height: 470px;
       margin-bottom: 80px !important;
@@ -317,6 +374,10 @@ strong {
   }
 }
 
+.modal-dialog {
+  width: 100% !important;
+}
+
 #smart-home {
   
   .callout {
@@ -324,6 +385,7 @@ strong {
 	  background-image: url('../images/kitchen.png');
 	  background-size: cover;
 	  background-position: top center;
+      height: 500px;
 	  
 	  h1 {
 		margin-top: 70px !important;
@@ -331,8 +393,7 @@ strong {
     }
 	&.reg {
       background-color: #222328;
-      padding-top: 70px;
-      height: 650px;
+      padding: 70px;
 
       .featurette-heading {
         margin-bottom: 50px;
@@ -435,7 +496,7 @@ footer {
 
 
 .callout {
-  height: 500px;
+/*  height: 500px;*/
   margin-bottom: 60px;
   background-color: #777;
   color: #FFF;
@@ -490,26 +551,37 @@ footer {
   background-color: #FFF;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
   border-radius: 4px;
-  height: 170px;
-  width: 70%;
+  height: 250px;
   display: block;
+  box-shadow: 0 2px 4px #DDD;
   
   &.a {
 	margin-left: auto;
-	background-image: url('../images/utterances.png');
+	background-image: url('../images/bot_logo.png');
   }
   
   &.b {
 	margin-right: auto;
-	background-image: url('../images/alexa_exp.jpg');
+    background-image: url('../images/smart_home_preview.png');
+  }
+  
+  &.c {
+	margin-left: auto;
+	background-image: url('../images/hive_preview.png');
+  }
+  
+  &.d {
+	margin-right: auto;
+    background-image: url('../images/white_yahoo_logo.png');
   }
 
 }
 
 .highlight-cap {
-  width: 65%;
+  h3 {
+    line-height: 20px;
+  }
 
   &.a {
 	margin-left: auto;
@@ -519,9 +591,6 @@ footer {
 	margin-right: auto;
   }
   
-  p {
-	 margin-top: -5px;
-  }	
 }
 
 .featurette {
@@ -532,6 +601,7 @@ footer {
   font-family: RalewayBold, Helvetica, sans-serif !important;
   font-size: 130% !important;
   font-weight: bold;
+  line-height: 25px !important;
 }
 
 .feature {
@@ -567,17 +637,15 @@ footer {
 .row.personal-sum {
   margin-left: 0 !important;
   margin-right: 0 !important;
-}
+ }
 
 .personal-sum {
   text-align: center;
-  margin-top: -80px;
   
   .kvp {
-    list-style: none;
 	text-align: left;
-	margin-top: 30px;
 
+/*
 	
 	li {
       display: block;
@@ -611,7 +679,8 @@ footer {
 	    background-image: url('../images/kvp_4.png');
       }
 
-    }    
+    }
+    */    
   }
 }
 
@@ -683,20 +752,26 @@ li ul {margin-top:6px;}
 
 @media (max-width: 768px) {
 
+
+  #homepage .callout.rich-header.home .container, #homepage .container.marketing {
+    padding: 0 20px;
+  }
+  
+  .kvp h4 {
+	margin-top: 40px;
+  }
+
+  #homepage .navbar li a {
+    color: #FFF !important;
+  }
+  
+
   .role {
 	margin-bottom: 40px;
   }
 
   #hive .callout {
-    &.rich-header {
-      height: 760px !important;
 
-	  .hive-container {
-		 text-align: center;
-	  }
-	  
-
-    }
     
     &.reg {
       height: 320px !important;
@@ -770,14 +845,7 @@ li ul {margin-top:6px;}
     font-size: 150% !important;	  
   }
 
-  #homepage .container.marketing {
-    margin-top: 140px;
-    width: 100%;
-  }
-  
-  .rich-header {
-	height: 700px;
-  }
+ 
   
   .pic-cap {
 	top: 75px !important;
@@ -787,14 +855,6 @@ li ul {margin-top:6px;}
     .kvp {
       text-align: center;
       
-      li {
-	    left: -20px !important;
-      }
-     
-	  .kvp-icon {
-		width: 40%;
-		margin: 0 auto 20px auto;
-	  }
 	}
   }
 
@@ -906,9 +966,6 @@ li ul {margin-top:6px;}
 	width: 75% !important;
   }
 
-  #homepage .container.marketing {
-    width: 64% !important;
-  }
 
   .carousel-caption p {
     margin-bottom: 20px;
@@ -943,10 +1000,7 @@ li ul {margin-top:6px;}
   .project-highlight {
     height: 130px;
   }
-  
-  #smart-home .callout.reg {
-	height: 550px;
-  }
+
 
 }
 
@@ -988,17 +1042,14 @@ li ul {margin-top:6px;}
   }
   
   .project-highlight {
-    height: 170px;
+    height: 200px;
   }
   
   #smart-home .feature {
 	 height: 300px !important;
   }
 
-  
-  #smart-home .callout.reg {
-	height: 600px;
-  }
+
 }
 
 
@@ -1036,9 +1087,6 @@ li ul {margin-top:6px;}
 	margin-top: -20px;
   }
 
-  #smart-home .callout.reg {
-	height: 650px;
-  }
 }
 
 
