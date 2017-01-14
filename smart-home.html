@@ -13,6 +13,9 @@
     <meta name="author" content="Lauren Tsung">
     <link rel="icon" href="../../favicon.ico">
     <title>Lauren Tsung</title>
+    <link rel="stylesheet" href="http://mediaelementjs.com/js/mejs-2.23.2/mediaelementplayer.min.css">
+
+
     <link rel="stylesheet" href="./styles/main.css">
 
   </head>
@@ -105,13 +108,24 @@
           <div class="feature-cap">
             <div class="divider"></div>
             <h4 class="featurette-heading">Kitchen Assistance</h4>
-            <p>I love experimenting with sous vide cooking and was excited to find out there is an immersion circulator hooked into Alexa. Having recently purchased <a href="https://www.chefsteps.com" target="_blank">Chefsteps' Joule</a>, I'm learning more about their philosophy in the kitchen and argument for voice assistance as an advantage to any cook's workflow.  While functionality is limited right now, I imagine a scenario where my mis en place can be greatly streamlined or a time where I come from work and I can kick off a home cooked meal in a pinch.
+            <p>I love experimenting with sous vide cooking and was excited to find out there is an immersion circulator hooked into Alexa. Having recently purchased <a href="https://www.chefsteps.com" target="_blank">Chefsteps' Joule</a>, I'm learning more about their philosophy in the kitchen and argument for voice assistance as an advantage to any cook's workflow.</p><br>
+            <p>While functionality is limited right now, I imagine a scenario where my mis en place can be greatly streamlined or a time where I come from work and I can kick off a home cooked meal in a pinch. 
           </div>
+
+
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="feature">
-            <img src="./images/joule.png" width="100%">    
-          </div>
+			<video id="player1" width="100%" height="364" controls="control" preload="none">
+				<source src="./images/mis_en_place.mp4" type="video/mp4" />
+				<source src="./images/mis_en_place.ogv" type="video/ogg" />
+				<object width="540" height="303" type="application/x-shockwave-flash" data="/js/mediaelementplayer.swf">
+					<param name="movie" value="/js/mediaelementplayer.swf" />
+					<param name="flashvars" value="controls=true&amp;file=./images/mis_en_place.mp4" />
+					<img src="./images/joule.png" width="540" height="303" title="No video playback capabilities" />
+				</object>
+			</video>
+		  </div>
         </div>
       </section>
 
@@ -202,7 +216,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://mediaelementjs.com/js/mejs-2.23.2/mediaelement-and-player.min.js"></script>
     <script src="./scripts/main.js"></script>
+
+
 
   </body>
 </html>

@@ -30,7 +30,11 @@ $(window).scroll(function(event) {
        
    } else {
       // Up
+
+       $('.navbar li a').css('cssText', 'color: #FFF !important');
+
        $('.navbar-inverse').css('cssText', 'background-color: #1C1E37 !important');
+
      
        $('.navbar-wrapper').css('position', 'fixed');
        
@@ -45,6 +49,13 @@ $(window).scroll(function(event) {
    lastScrollTop = st;
 });
 
-function fadeIn(obj) {
-    $(obj).fadeIn(1000);
-}
+jQuery(document).ready(function($) {
+ 
+    // create player
+    $('#player1').mediaelementplayer({
+        // add desired features in order
+        // I've put the loop function second,
+        features: ['playpause','loop','current','progress','duration','volume']
+    }).attr("poster", "../images/joule.png");
+ 
+});
