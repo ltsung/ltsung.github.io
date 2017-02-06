@@ -14,6 +14,15 @@
     <link rel="icon" href="../../favicon.ico">
     <title>Lauren Tsung</title>
     <link rel="stylesheet" href="./styles/main.css">
+    
+    <!--
+    
+    SASS work with engineers
+    new images
+    lightly reference skill store
+    
+    
+    -->
 
   </head>
   <body id="yai">
@@ -147,6 +156,26 @@
         </div>
       </section>
 
+      <section class="row featurette">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature d">
+
+            <a href="#" data-toggle="modal" data-target="#cooking-assistance">
+	          <br><br>
+	          <img src="./images/cooking_assistance_preview.png" width="90%" style="border: 1px solid #DDD; margin-top: -35px;">
+	          <div class="expand cooking"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="feature-cap">
+            <div class="divider"></div>
+            <h4 class="featurette-heading">Expanding Utterance Recognition</h4>
+            <p>As we conceptualize the potential of the platform, we are mindful that we want the system to recognize a huge breadth of utterances.  Therefore, we are considering how we can cater to multimodal capabilities: we want to address both chatbot and VUI use cases.  Here is my early exploration on how I would assign modalities for a typical cooking workflow.  Due to the fact that cooking requires attention to the physical environment more so than a digital screen, I created rules around which aspects of the cooking workflow are best optimized for VUI vs text-based conversational flow.</p>
+          </div>
+        </div>
+      </section>
+
     </div><!-- /.container -->
     
 
@@ -169,10 +198,6 @@
 
           </div>
         </div>
-        
-      
-                    
-
 
       </div>
     </section><!-- / Callout -->
@@ -198,6 +223,22 @@
         </ol>
       </div>
     </section>
+
+
+<!-- Cooking Assistance Modal -->
+<div class="modal fade" id="cooking-assistance" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Multimodal Cooking Assistant</h4>
+      </div>
+      <div class="modal-body">
+        <img src="./images/cooking_assistance.png" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Related Reading -->
     <section class="container footer">
