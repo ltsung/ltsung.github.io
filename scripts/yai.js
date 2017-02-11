@@ -1,0 +1,1 @@
+function passWord(){for(var a=1,b=prompt("Please Enter Your Password"," ");a<3;){if(b||history.go(-1),"studio"==b.toLowerCase()){window.location.replace("./yai.html");break}a+=1;var b=prompt("Access Denied - Password Incorrect, Please Try Again.","Password")}return"password"!=b.toLowerCase()&3==a&&history.go(-1)," "}
