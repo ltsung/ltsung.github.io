@@ -67,7 +67,7 @@
          Since the beginning of 2016, the Yahoo Search organization has been investing in launching chatbot experiments across Kik and Facebook Messenger (e.g. Yahoo News, MonkeyPet).  The need for standardizing and streamlining bot creation amongst engineers, editors, and scientists arose as well as the ambition to release our in-house technology externally to third party developers.  I took on the role of lead product designer where I partner closely with groups of technology experts to deliver a minimum viable platform that enables an end-to-end workflow of creating rich dialog design and configuring natural language understanding.  Thus far, we’ve shipped a small invite-only beta and currently are iterating on v2 of the platform for wider release.
          </p>
          <p class="text">
-	       For my individual contribution, I concentrated on product ideation, overall user experience architecture, interaction design, and frontend CSS coding within the production build via the SASS framework. I organized the efforts of 2 part-time designers who filled in the gaps for visual design, information architecture, and interaction design.
+	       For my individual contribution, I concentrated on product ideation, overall user experience architecture, interaction design, and frontend coding within the production build (I coded within the SASS framework and edited React components). I organized the efforts of 2 part-time designers who filled in the gaps for visual design, information architecture, and interaction design.
          </p>
       </div>
     </section>
@@ -106,7 +106,7 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="feature-cap">
             <div class="divider"></div>
-            <h4 class="featurette-heading">High-Level Creation Flow</h4>
+            <h4 class="featurette-heading">Early Conceptual Model</h4>
             <p class="text">I worked with lead engineers in creating a mental model around bots and skills.  We wanted to design a system that encapsulated how various teams could leverage shared logic for concepts such as intents, fulfillment, and card design.  We devised possibilities to package bot logic in terms of Skills and deploy bots across any chat platform in parallel.</p>
           </div>
         </div>
@@ -116,13 +116,14 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="feature-cap">
             <div class="divider"></div>
-            <h4 class="featurette-heading">MVP Navigation Structure</h4>
-            <p class="text">For our minimum viable platform, I designed a structure that partitions high-level bot call-to-actions and model status from the main work space.  The main navigation is centered around Skills and Dialogs.  We assumed that our Skill Store would be in place for various teams to take advantage of in scaffolding new bot projects.  The idea was to encourage people to “not reinvent the wheel”, yet allow for lightweight editing of skills. Meanwhile, the Dialogs section was meant to contain conversation definitions that were intent-less (e.g. Onboarding, Legal).</p>
+            <h4 class="featurette-heading">Card System</h4>
+            <p class="text">Most of the modules within the platform design are cards.  In order to design cards that show consistency in aesthetic and interaction, I first created them in abstract form.  I sectioned off where card content vs contextual actions needed to be defined with respect to context (e.g. use case, layout, relationship to other cards).  Also, I factored in how cards needed to be stacked depending on the need for information density.</p><br>
+            <p>I have a couple of card types shown here: for Utterances, Intents/Skills, Dialogs, and the Bot Dashboard.
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="feature c">
-	        <img src="./images/yai_nav_arch.png" width="90%">
+	        <img src="./images/yai_cards.png" width="100%">
           </div>
         </div>
       </section>
@@ -148,7 +149,7 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="feature-cap">
             <div class="divider"></div>
-            <h4 class="featurette-heading">Expanding Utterance Recognition</h4>
+            <h4 class="featurette-heading">Supporting Multi-modality</h4>
             <p class="text">As we conceptualize the potential of the platform, we are mindful that we want the system to recognize a huge breadth of utterances.  Therefore, we are considering how we can cater to multimodal capabilities: we want to address both chatbot and VUI use cases.  Here is my early exploration on how I would assign modalities for a typical cooking workflow.  Due to the fact that cooking requires attention to the physical environment more so than a digital screen, I created rules around which aspects of the cooking workflow are best optimized for VUI vs text-based conversational flow.</p>
           </div>
         </div>
