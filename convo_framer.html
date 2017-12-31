@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lauren Tsung</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/mediaelement/latest/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./downloads/lt_resume.pdf" target="_blank">Resume <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+      <header>
+        <div class="container">
+          <h1>Conversation Motion Design<br> with Framer</h1>
+          <h3>Lead UX Prototyper</h3>
+        </div>
+      </header>
+
+
+
+      <main role="main">
+
+        <div class="container">
+          <section>
+            <div class="content">
+              <h2>Introduction</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="header-type">
+                    Since my team in Yahoo Search is interested in conversational
+                    design, I wanted to understand what it means to simulate a more
+                    "natural" interaction between machine and user. Here, I explored the concept of an agent typing back to a user. I'll provide
+                    very high level insight into my prototyping thought process. Unlike
+                    my prototyping for VUI (see <a href="./gspread_skill.html" target="_blank">my
+                    Alexa Skill making prototype</a>), I mimic texting interactions
+                    using Framer, which is a tool I often use for native mobile experiences.
+</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br>
+          <section>
+            <div class="content">
+              <h2>Framer Design Setup</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item framer-a"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    I set up all of my screen artboards and layer groupings
+                    in the Design tab of Framer Studio, making sure to enable
+                    specific layers to be programmatically selectable for animating with later. I strategically make certain layer groupings have zero
+                    opacity or move off screen before sliding them in decoratively with code.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Typing Simulation Functions</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    Here are two of the functions I wrote that allowed me to
+                    easily tweak the sliding and bouncing motions of a "dot dot dot"
+                    in progress animation. I essentially created a loop over three
+                    dots and played around with different opacities, x and y values, and
+                    frequencies.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item framer-b">
+                    <script src="https://gist.github.com/ltsung/aaf762db8880c513807ea0a237dbbbb7.js"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Example Typing Rhythm</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item framer-c">
+                    <video id="dot_dot_dot">
+                      <source src="./images/dot_dot_dot.mp4" type="video/mp4">
+                    </video>
+
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    The design tension here is to create a speed such that the
+                    subtle details of sliding and bouncing show; however, if the
+                    speed is too slow, it might be annoying for the user in terms
+                    of lag time and seeming too artificial.
+                   </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Talking with the Bot</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    Here is a sample interaction where a user can tap on canned
+                    responses (bottom pills) to quickly answer a bot prompt. I am still
+                    figuring out the best speeds to account for longer text to animate
+                    in after the dots fade away.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item framer-d"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <br><br>
+
+        <section class="lessons">
+          <div class="container">
+            <h2>Lessons Learned</h2>
+            <div class="row">
+              <div class="col-sm-8">
+                <ol>
+                  <li>
+                    Users seemed to enjoy the typing simulations in lab studies.
+                    However, we would need to consider how the typing would affect
+                    user delight over time.
+                  </li>
+                  <li>
+                    Engineers had a tough time translating this to clean production code
+                    (we wanted to deploy to both Android and iOS), so I had to greatly
+                    simplify the animation subtleties.
+                  </li>
+                </ol>
+               </div>
+            </div>
+          </div>
+        </section>
+        <section class="nav-bot">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                ❖&nbsp;&nbsp;<a href="./index.html">View Portfolio Index</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+
+    <a href="./ai_studio.html" id="nav-left"></a>
+    <a href="./search_assist.html" id="nav-right"></a>
+    <div id="nav-up"></div>
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/mediaelement/latest/mediaelement-and-player.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

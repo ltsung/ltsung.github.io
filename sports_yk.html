@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lauren Tsung</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./downloads/lt_resume.pdf" target="_blank">Resume <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+      <header>
+        <div class="container">
+          <h1>Yahoo Sports Knowledge Graph <br>+ Alexa Skill Design</h1>
+          <h3>Lead UX Designer and Prototyper</h3>
+        </div>
+      </header>
+
+
+
+      <main role="main">
+
+        <div class="container">
+          <section>
+            <div class="content">
+              <h2>Introduction</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="header-type">
+                    In the Yahoo Search organization, a team of us (designers, engineers,
+                    machine learning scientists, editors, product managers) are interested
+                    in investigating conversational experiences and have launched
+                    experiments such as chatbots in 2016. This particular case
+                    study focuses on an early exploration of voice user experience
+                    design and Yahoo Sports data.  Due to the fact that this project
+                    has not been launched publicly, I am intentionally obfuscating
+                    information.  But I will provide broad brush strokes on how we
+                    are trying to uncover underlying design patterns for question
+                    and answer use cases, increasing discoverability of answers
+                    via voice and card formats, and striking the appropriate balance
+                    for more "humanized" machine responses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br>
+          <section>
+            <div class="content">
+              <h2>Sports Consumption Across Devices</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item yk-a"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    Here is a rough depiction of how a typical sports fan
+                    may request news throughout the day. I'm currently working
+                    with the User Experience Research team to deeply understand
+                    the specific user contexts (e.g. times of day, question
+                    needs, devices used) in order to design appropriate answer
+                    formats across devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>VUI Progressive Enhancement</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    Given the inherent difficulties of comprehension and discoverability
+                    that are affiliated with VUI, I want to understand what it means
+                    to make a concise yet precise voice-only answer. Should the user
+                    also be using a screen in conjunction (e.g. Echo Show), I will
+                    consider how a GUI experience can augment the VUI experience.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item yk-b"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Answer Samples</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item yk-c">
+                    <div class="skill-audio a">
+                      <audio controls>
+                        <source src="./images/seasonPlayerStatusA.m4a" type="audio/mpeg">
+                      </audio>
+                    </div>
+                    <div class="skill-audio b">
+                      <audio controls>
+                        <source src="./images/seasonPlayerStatusB.m4a" type="audio/mpeg">
+                      </audio>
+                    </div>
+                    <div class="skill-audio c">
+                      <audio controls>
+                        <source src="./images/seasonPlayerStatusC.m4a" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    Here are example answers I've designed for the question "How is Steph Curry
+                    playing tonight?" using <a href="./gspread_skill.html" target="_blank">
+                    my homegrown Alexa Skill making prototyping tool</a>.  The answer variation A
+                    includes a related followup question that can spur more conversation or highlight
+                    the sophistication of this example Sports Skill. Variation B is the plain answer
+                    based on my understanding of the parameters of a user's intent.  And the final C
+                    variation uses Alexa SSML speechcons to add playful humor to the answer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>User Feedback</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    I've taken batches of answer variations to the User Research
+                    Lab and had participants help us narrow down on the requirements
+                    for a correct answer and give us insight on how they feel about
+                    our Skill's personality.  On the right is an example spreadsheet
+                    I use to record actual user utterances, intents, and their feedback.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item yk-d"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+        </div>
+
+        <br><br>
+
+        <section class="lessons">
+          <div class="container">
+            <h2>Lessons Learned</h2>
+            <div class="row">
+              <div class="col-sm-8">
+                <ol>
+                  <li>
+                    I have to be sensitive to a user's familiarity with assistants; there
+                  aren't a whole lot of users that are, let alone think highly of their
+                  capabilities. Typical use cases currently don't exceed listening to music,
+                  managing alarms, and asking about weather (assuming non-smart home usage).
+                  </li>
+                  <li>
+                    While some users have expressed the need for an assistant to sound
+                    less robotic, there's still a whole lot of room for understanding
+                    what sounds too cheesy or artificial (e.g. the uncanny valley for voice).
+                  </li>
+                  <li>
+                    Figuring out the parameters of a correct answer before playing around
+                    with decoration (e.g. in terms of interesting additional
+                    editorial or personality) has been a useful approach.
+                  </li>
+                </ol>
+               </div>
+            </div>
+          </div>
+        </section>
+        <section class="nav-bot">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                ❖&nbsp;&nbsp;<a href="./index.html">View Portfolio Index</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+
+    <a href="./media.html" id="nav-left"></a>
+    <a href="./gspread_skill.html" id="nav-right"></a>
+    <div id="nav-up"></div>
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

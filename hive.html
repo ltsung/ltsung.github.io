@@ -1,235 +1,241 @@
-<!--
-  Lauren Tsung 2016
-  Programmed with Twitter Bootstrap, SASS, JS
--->
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Lauren Tsung's portfolio">
-    <meta name="author" content="Lauren Tsung">
-    <link rel="icon" href="../../favicon.ico">
     <title>Lauren Tsung</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/main.css">
 
+
+    <!-- endbuild -->
+
   </head>
-  <body id="hive">
-    <div class="navbar-wrapper">
-      <div class="container">
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="./index.html"><img src="./images/lauren_tsung.png" height="28px"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="./downloads/lt_resume.pdf" target="_blank">Resume</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-
-    <!-- Rich Header -->
-    <section class="callout rich-header">
-      <div class="container">
-      
-        <div class="row">
-	      <div class="col-sm-12 col-md-12">
-            <h1>Evolving the Product Hypothesis:<br> “Hive Q&A”</h1>
-            <h4 class="role">Co-lead Product Designer</h4>	
-            
-	      </div>  
-
+<div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./downloads/lt_resume.pdf" target="_blank">Resume <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section><!-- / Rich Header -->
-
-
-    <section class="container">
-      <div class="row overview">
-        <h2>Project Overview</h2>
-         <p class="text">
-         The Search organization invested in incubating several product hypotheses through small team execution (1 product manager to ~1 designer to ~8 engineers).  My team was responsible for understanding ephemeral, geo-fenced searching needs on mobile.  Throughout the weeks we radically pivoted, ultimately releasing as “Hive” to college graduates and young professionals in Canada and the United States.  We believed that creating a questions and answers community could organically surface interesting problems that aren't easily solvable through traditional search. Much of the learnings around forming communities and curating questions form the framework for the widely released <a href="https://itunes.apple.com/us/app/yahoo-answers-now/id1111749046?mt=8" target="_blank">Yahoo Answers Now</a>.
-         </p>
-
-         <p class="text">
-         My specific contributions to this project included product thinking, user research, interaction design, and prototyping.  Inspired by the lean design philosophy as detailed in <a href="https://www.amazon.com/Lean-UX-Designing-Great-Products/dp/1491953608" target="_blank">Lean UX: Designing Great Products with Agile Teams</a>, I frequently leverage the hypothesis format as a tool to drive the learning mindset, which is critical when navigating pivots.
-         </p>
-
-      </div>
-    </section>
-
-    <section class="callout reg">
-      <div class="container">
-        
-        <div class="divider white"></div>
-        <h4 class="featurette-heading">Product Definition Pivoting Journey</h4>
-        
-	    <img class="pivot-journey" src="./images/pivot_journey.png" width="80%">
-        
-      </div>
-    </section>
-
-
-    <div class="container marketing">
-
-      <section class="row featurette">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature-cap">
-            <div class="divider"></div>
-            <h4 class="featurette-heading">Lab Studies</h4>
-            <p class="text">Partnering closely with the User Research team, I planned and conducted bi-weekly studies where I captured natural user language to better empathize with user mental models. 
-After each session, I would co-facilitate debriefs and early analysis prior to providing a formalized report to the larger teams and stakeholders.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature a">
-	        <img src="./images/hive_lab.png" width="100%">
-          </div>
-        </div>
-      </section>
-
-      <section class="row featurette">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-	      <img src="./images/emoji_proto.gif" width="60%" style="border: 1px solid #EEE;">  	          
-
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature-cap">
-            <div class="divider"></div>
-            <h4 class="featurette-heading">Rapid Feature Testing</h4>
-            <p class="text">In the spirit of "working scrappy", at times I would code up wireframe-like prototypes to quickly experiment with possible features we thought about bringing into production.  For example, we wanted to explore the notion of enabling users to express moods and feelings through emoji to help add dimension to question ranking and community formation.  Therefore, I implemented a filtered stream where a user could sort on emotion types and a fun means of contributing to shared emotions on a Questions page.<br><br> 
-
-<span class="tech-used">
-<strong class="text">Tech Used:</strong>&nbsp;&nbsp;HTML5/CSS3, jQuery, AngularJS, Frameless</span></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="row featurette">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature-cap">
-            <div class="divider"></div>
-            <h4 class="featurette-heading">Initial Release and Campaigning</h4>
-            <p class="text">After landing on the hypothesis of forming communities around topics, we released an invite-gated experience for select regions in Canada and primarily friends and family in the United States. Because our hypothesis wasn't fully under the Yahoo brand umbrella, our small team campaigned grass-roots style and via Facebook ads where we saw first-hand how our key value propositions performed outside of initial lab testing.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature c">
-
-	        <img src="./images/hive_campaign.png" width="90%">
-	          
-          </div>
-        </div>
-      </section>
-
-      <section class="row featurette">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature d">
-            <a href="#" data-toggle="modal" data-target="#notifications">
-	          <br><br>
-	          <img src="./images/hive_notifications.png" width="90%">
-	          <div class="expand hive"></div>
-            </a>
-
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="feature-cap">
-            <div class="divider"></div>
-            <h4 class="featurette-heading">Refining the System</h4>
-            <p class="text">As we developed more confidence in our product, we wanted to take a step back and resolve unfinished design thinking.  In this case, I explored the app notification system.  In one of these diagrams, I show a traversal through the key use cases in the product and the types of alerts a user can expect for items implicitly and explicitly engaged with.  I noted patterns across notification types and tiered them in order to shed light on how to organize across in-app vs push notifications. Additionally, I considered how notifications could guide a user into buying into the product's value over time (e.g. a user feeling rewarded for answering n number of questions and reaching a top rank in the Hive community).<br><br> 
-</p>
-          </div>
-        </div>
-      </section>
-      
-      <section class="row featurette">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-	      <img src="./images/hive_release.png" width="90%">
-        </div>
-      </section>
-
-
-    </div><!-- /.container -->
-
-    <section class="lessons-list">
-      <div class="row overview learnings">
-        <h2>Lessons Learned</h2>
-        
-        <ol class='lessons'>
-          <li>
-            <h4>Set the team up to learn constantly.</h4>
-	        <p class="text">
-	         It was crucial that each member of the team felt accountable to the product definition, design, development, and testing of the product.  One of my best accomplishments in facilitating learning was when I held a design workshop with the engineers where we riffed personas, scenarios, and wireframes in a “studio” fashion. It created shared understanding and built team rapport early on.
-	        </p>
-          </li>
-          <li>
-            <h4>Nail the crux of the user need.</h4>
-	        <p class="text">
-	         The lean UX philosophy is all about enumerating assumptions regularly and quickly validating them.  This mindset was helpful when it came to learning about our assumptions of what users would find interesting.  We were humbled when we learned that our obsessions with features prevented us from ironing out a compelling product core.
-	        </p>
-          </li>
-          <li>
-            <h4>Shipping Weekly > Perfection.</h4>
-	        <p class="text">
-	         It is too tempting as a designer to be fixated on the pixels and miss the big mark: our obligation is to get something real for a user to regularly adopt into her daily habit.  Preferring something scrappy like whiteboard sketches over Sketch files became more of a habit that I think I’d like to evangelize in future practices, as this encouraged higher collaboration and speed.
-	        </p>
-          </li>
-
-        </ol>
-      </div>
-    </section>
-
-<!-- Notifications Modal -->
-<div class="modal fade" id="notifications" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4>Notifications Design</h4>
-      </div>
-      <div class="modal-body">
-        <img src="./images/hive_notification_a.png" width="100%"><br><br>
-        <img src="./images/hive_notification_b.png" width="100%">  
-      </div>
-    </div>
-  </div>
+      </nav>
 </div>
-    
+      <header>
+        <div class="container">
+          <h1>Hive Questions &amp; Answers</h1>
+          <h3>Co-lead UX Designer and Prototyper</h3>
+        </div>
+      </header>
 
 
-    <!-- Related Reading -->
-    <section class="container footer">
-      <div class="row">
-        <div class="col-sm-3 col-md-3">
-          <a class="view-port" href="./index.html">
-            <span class="view-portfolio-icon"></span>
-            <span class="port-link">View Portfolio</span>
-          </a>        </div>
-        <div class="col-sm-9 col-md-9 article">
-          <span class="goto">&#187;</span>&nbsp;<a href="./media-proto.html">Prototyping for the Yahoo Homepage and Network</a>	        
-        </div>        
-      </div>
-    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <main role="main">
+
+        <div class="container">
+          <section>
+            <div class="content">
+              <h2>Introduction</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="header-type">
+The Search organization invested in incubating several product hypotheses through small team execution (1 product manager to ~1 designer to ~8 engineers). My team was responsible for understanding ephemeral, geo-fenced searching needs on mobile. Throughout the weeks we radically pivoted, ultimately releasing as “Hive” to college graduates and young professionals in Canada and the United States. We believed that creating a questions and answers community could organically surface interesting problems that aren't easily solvable through traditional search. Much of the learnings around forming communities and curating questions form the framework for the widely released <a href="https://itunes.apple.com/us/app/yahoo-answers-now/id1111749046?mt=8" target="_blank">Yahoo Answers Now</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br>
+          <section>
+            <div class="content">
+              <h2>Lean Learning Mindset</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item hive-a"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+Inspired by the lean design philosophy as detailed in <a href="https://www.amazon.com/Lean-UX-Designing-Great-Products/dp/1491953608" target="_blank">Lean UX: Designing Great Products with Agile Teams</a>, I frequently leverage the hypothesis format as a tool to drive the learning mindset, which is critical when navigating pivots.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Frequent Lab Studies</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+Partnering closely with the User Research team, I planned and conducted bi-weekly studies where I captured natural user language to better empathize with user mental models. After each session, I would co-facilitate debriefs and early analysis prior to providing a formalized report to the larger teams and stakeholders.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item hive-b"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Rapid Feature Testing</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item hive-c"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    In the spirit of "working scrappy", at times I would code up wireframe-like prototypes to quickly experiment with possible features we thought about bringing into production. For example, we wanted to explore the notion of enabling users to express moods and feelings through emoji to help add dimension to question ranking and community formation. Therefore, I implemented a filtered stream where a user could sort on emotion types and a fun means of contributing to shared emotions on a Questions page.
+<br><br>
+<strong>Tech Used:</strong>  HTML5/CSS3, jQuery, AngularJS, Frameless
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Initial Release and Campaigning</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+After landing on the hypothesis of forming communities around topics, we released an invite-gated experience for select regions in Canada and primarily friends and family in the United States. Because our hypothesis wasn't fully under the Yahoo brand umbrella, our small team campaigned grass-roots style and via Facebook ads where we saw first-hand how our key value propositions performed outside of initial lab testing.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item hive-d"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Refining the System</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item hive-e"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    As we developed more confidence in our product, we wanted to
+                    take a step back and resolve unfinished design thinking.
+                    Here I show a traversal through the key
+                    use cases in the product and the types of alerts a user can
+                    expect for items implicitly and explicitly engaged with.
+                    I noted patterns across notification types and tiered them
+                    in order to shed light on how to organize across in-app vs
+                    push notifications. I considered how notifications
+                    could guide a user into buying into the product's value over time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Creating Communities</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    Throughout each product pivot, we noted how we wanted to steer
+                    communication within the product.  We constantly debated some
+                    fundamentals (e.g. Is this a discussions forum? Are answers
+                    opinion-based or factual?) and iterated upon the types of communities
+                    we wanted to form.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item hive-f"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <br><br>
+
+        <section class="lessons">
+          <div class="container">
+            <h2>Lessons Learned</h2>
+            <div class="row">
+              <div class="col-sm-8">
+                <ol>
+                  <li>
+It was crucial that each member of the team felt accountable to the product definition, design, development, and testing of the product. One of my best accomplishments in facilitating learning was when I held a design workshop with the engineers where we riffed personas, scenarios, and wireframes in a “studio” fashion. It created shared understanding and built team rapport early on.
+                  </li>
+                  <li>
+The lean UX philosophy is all about enumerating assumptions regularly and quickly validating them. This mindset was helpful when it came to learning about our assumptions of what users would find interesting. We were humbled when we learned that our obsessions with features prevented us from ironing out a compelling product core.
+                  </li>
+                  <li>
+It is too tempting as a designer to be fixated on the pixels and miss the big mark: our obligation is to get something real for a user to regularly adopt into her daily habit. Preferring something scrappy like whiteboard sketches over Sketch files became more of a habit that I think I’d like to evangelize in future practices, as this encouraged higher collaboration and speed.
+                  </li>
+                </ol>
+               </div>
+            </div>
+          </div>
+        </section>
+        <section class="nav-bot">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                ❖&nbsp;&nbsp;<a href="./index.html">View Portfolio Index</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+    <a href="./smart_apt.html" id="nav-left"></a>
+    <a href="./media.html" id="nav-right"></a>
+    <div id="nav-up"></div>
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-    <script src="./scripts/main.js"></script>
-
+    <script src="scripts/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lauren Tsung</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./downloads/lt_resume.pdf" target="_blank">Resume <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+      <header>
+        <div class="container">
+          <h1>Yahoo Search Assist:<br>Quick Answers and Enhancements</h1>
+          <h3>Lead UX Prototyper</h3>
+        </div>
+      </header>
+
+
+
+      <main role="main">
+
+        <div class="container">
+          <section>
+            <div class="content">
+              <h2>Introduction</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="header-type">
+                     The team wanted to experiment with making Yahoo Search Assist (search autocomplete)
+                     even smarter.  Given a user's need for immediacy when it comes
+                     to searching, we explored exposing more of our
+                     Knowledge Graph within the Search Assist module. The following
+                     prototype proposes the surfacing of
+                     “quick facts” (e.g. current times in different
+                     locations, measurement conversions) and relevant
+                     news articles that closely correlate to an entity.
+</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br>
+          <section>
+            <div class="content">
+              <h2>An Enriched Experience</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item search-a"></div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    To create this snappy experience, I utilized jQuery's autocomplete
+                    module and inserted my own templates to decorate all of the suggestion
+                    batches we wanted to test in Lab.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Sample Suggestion Batches</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    I created a huge JavaScript object for all of the suggestions, their
+                    corresponding answers, and fake search ranking. This was the fuel
+                    behind simulating a typical search experience for each character typed.
+                   </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item search-b">
+                    <script src="https://gist.github.com/ltsung/80c9bc70ad8750c7bd9b3fec1f5a22dc.js"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Rendering Templates In Real Time</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item search-c">
+                    <script src="https://gist.github.com/ltsung/2f9a15c5494348e4060ba572ead525cd.js"></script>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    For each substring of a suggestion, I pushed a new batch of
+                    data to the Search Assist module. These are raw strings that
+                    I eventually decorate with custom images, spacing, or appended
+                    modules.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item search-c">
+                    <script src="https://gist.github.com/ltsung/20028fb86d662c8d72456916cd0e8977.js"></script>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <p>
+                    Depending on the intent, we render a type of experience via
+                    custom HTML in the "each" function.  I utilized both CSS and
+                    image slivers of our mocks to mimic the aesthetic.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>User Feedback and Eye Tracking</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    Interestingly, users hardly noticed some of our bottom article
+                    positions in this prototype unless prompted.  We know that we have to re-consider
+                    their current reading behavior and intent behind their query.
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item search-d"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <br><br>
+
+        <section class="lessons">
+          <div class="container">
+            <h2>Lessons Learned</h2>
+            <div class="row">
+              <div class="col-sm-8">
+                <ol>
+                  <li>
+                    I was re-humbled by the fact that there is a fine balance to be struck when it comes
+                    to providing the exact answer vs something that is purely meant
+                    for discovery.
+                  </li>
+                  <li>
+                    jQuery's autocomplete module was a joy to deconstruct.  After un-minifying it, I was
+                    able to quickly adapt to insert my changes. The adage "Good Artists Copy; Great Artists Steal" proved fruitful.
+                  </li>
+                </ol>
+               </div>
+            </div>
+          </div>
+        </section>
+        <section class="nav-bot">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                ❖&nbsp;&nbsp;<a href="./index.html">View Portfolio Index</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+    <a href="./convo_framer.html" id="nav-left"></a>
+    <a href="./smart_apt.html" id="nav-right"></a>
+    <div id="nav-up"></div>
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
