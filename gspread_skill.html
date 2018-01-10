@@ -118,32 +118,15 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
           <br><br>
           <section>
             <div class="content">
-              <h2>Running It</h2>
-              <div class="row">
-                <div class="col-sm-4">
-                  <p>
-                    Given the correct directory structure and node module requirements, developers can type in <strong>node makeskill [Google Spreadsheet ID] [Batch ID] [Invocation Name]</strong>. I wrote the script such that it can output one Skill at a time given the commandline arguments.
-                  </p>
-                </div>
-                <div class="col-sm-8">
-                  <div class="port-item makeskill-d"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <br><br>
-          <section>
-            <div class="content">
               <h2>Generated Lambda Function</h2>
               <div class="row">
-                <div class="col-sm-8">
-                  <script src="https://gist.github.com/ltsung/a8939e614f472be8753a4a8294e4089d.js"></script>
-                </div>
                 <div class="col-sm-4">
                   <p>
                     Here is the response handlers file, where I map canned responses to intents. For now, the script mainly considers very rudimentary vocal output (one can try inputting SSML tags for Alexa-supported speechcons), and does not yet handle card UI.
                   </p>
+                </div>
+                <div class="col-sm-8">
+                  <script src="https://gist.github.com/ltsung/a8939e614f472be8753a4a8294e4089d.js"></script>
                 </div>
 
               </div>
@@ -155,14 +138,15 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
             <div class="content">
               <h2>Generated Interaction Model</h2>
               <div class="row">
+                <div class="col-sm-8">
+                  <script src="https://gist.github.com/ltsung/5412b4f38331e509564ecb22483490ac.js"></script>
+                </div>
                 <div class="col-sm-4">
                   <p>
                     Here we see the clustering of utterances folded under their respective intents. Because all responses are hardcoded right now, I do not factor in slots.
                   </p>
                 </div>
-                <div class="col-sm-8">
-                  <script src="https://gist.github.com/ltsung/5412b4f38331e509564ecb22483490ac.js"></script>
-                </div>
+
               </div>
             </div>
           </section>
@@ -172,13 +156,13 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
             <div class="content">
               <h2>Using Alexa SDK and AWS</h2>
               <div class="row">
-                <div class="col-sm-8">
-                  <div class="port-item makeskill-g"></div>
-                </div>
                 <div class="col-sm-4">
                   <p>
                     In under 5 minutes I can build new batches of Skills!  The work for the developer (and fellow stakeholders) is more in the planning and designing of the interactions!
                   </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item makeskill-g"></div>
                 </div>
 
               </div>
@@ -190,13 +174,13 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
             <div class="content">
               <h2>Testing on Echosim</h2>
               <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item makeskill-h"></div>
+                </div>
                 <div class="col-sm-4">
                   <p>
                     If I'm not testing on my Echo device, I'm using Echosim.io for simulation.  After hooking up my Amazon account, I can easily access my Alexa Skill locally even if I haven't deployed to the Alexa Skill Store.
                   </p>
-                </div>
-                <div class="col-sm-8">
-                  <div class="port-item makeskill-h"></div>
                 </div>
 
               </div>
