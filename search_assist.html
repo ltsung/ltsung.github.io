@@ -82,34 +82,69 @@
           <br>
           <section>
             <div class="content">
-              <h2>An Enriched Experience</h2>
+              <h2>Enriching an Entity</h2>
               <div class="row">
                 <div class="col-sm-8">
                   <div class="port-item search-a"></div>
                 </div>
                 <div class="col-sm-4">
                   <p>
-                    To create this snappy experience, I utilized jQuery's autocomplete
-                    module and inserted my own templates to decorate all of the suggestion
-                    batches we wanted to test in Lab.
+                    Yahoo stores plenty of information about entities for different domains.
+                    In this case, we played around with the idea of surfacing a relevant
+                    article to aid in discovering fresh news.
+                  <p>
+                  <p>
+                    To simulate this interaction, I utilized jQuery's autocomplete and
+                    created a news article template.  I then appended relevant images from our mocks
+                    at the bottom of the module given a query.
                   </p>
 
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Exposing the Knowledge Graph</h2>
+              <div class="row">
+                <div class="col-sm-4">
                   <p>
-                    For each substring of a suggestion, I pushed a new batch of
+                    For each substring of a suggestion, I pushed a new batch of mock
                     data to the Search Assist module. These are raw strings that
-                    I eventually decorate with custom images, spacing, or appended
-                    modules.
+                    I eventually decorate with custom CSS (e.g. type treatments, spacing).
+                    In this case, I'm decorating age data that could be associated with
+                    an entity that's part of the "How old is..." question.
                   </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item search-b"></div>
+                </div>
+              </div>
+            </div>
+          </section>
 
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Quick Facts, In Real Time</h2>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="port-item search-c"></div>
+                </div>
+                <div class="col-sm-4">
                   <p>
-                    Depending on the intent, we render a type of experience via
-                    custom HTML.  I utilized both CSS and
-                    image slivers of our mocks to mimic the aesthetic.
+                    We believed that this snappy autocomplete experience could work
+                    well with highly utilitarian use cases (e.g. discovering time,
+                    unit conversions).
                   </p>
                 </div>
               </div>
             </div>
           </section>
+
+
 
         </div>
 
@@ -126,7 +161,9 @@
                     for discovery.
                   </li>
                   <li>
-                    jQuery's autocomplete module was a joy to deconstruct.  After un-minifying it, I was
+                    To create this snappy experience, I utilized jQuery's autocomplete
+                    module and inserted my own templates to decorate all of the suggestion
+                    batches we wanted to test in Lab. After un-minifying it, I was
                     able to quickly adapt to insert my changes. The adage "Good Artists Copy; Great Artists Steal" proved fruitful.
                   </li>
                 </ol>
