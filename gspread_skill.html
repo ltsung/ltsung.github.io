@@ -73,7 +73,7 @@
                     the interaction model and AWS Lambda functions needed for
                     Skill training. In this case study, I'll be demonstrating an
                     early version of my homemade tool.  This was the cornerstone to my
-                    design and prototyping efforts for the <a href="./sports_yk.html">Yahoo Sports Alexa project</a>.
+                    design and prototyping efforts for the <a href="./sports_yk.html">Crafting an NBA Q&amp;A Experience through Alexa project</a>.
                   </p>
                 </div>
               </div>
@@ -84,11 +84,15 @@
           <br>
           <section>
             <div class="content">
-              <h2>At a Glance</h2>
+              <h2>New Prototyping Methodology</h2>
               <div class="row">
                 <div class="col-sm-4">
                   <p>
-My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with 3 possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible "turn".
+I wanted to create a workflow that enabled the entire team to brainstorm and design answers in a common tool: Google Spreadsheets seemed to be the best for
+parallel editing and visualizing text comparisons.  I also wanted to create an automation that stayed true to what is supported by the Alexa SDK in the case of needing to evolve the Skill prototypes themselves.
+                  </p>
+                  <p>
+My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with N possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible "turn".
                   </p>
                 </div>
                 <div class="col-sm-8">
@@ -108,7 +112,7 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
                 </div>
                 <div class="col-sm-4">
                   <p>
-                    This is an example of a spreadsheet with a large set of utterances and various possible responses for a Sports Q&amp;A problem.
+                    This is an example of a spreadsheet with a large set of utterances and various possible responses for a Sports Q&amp;A problem.  I can output Skill files for any of these batches.
                   </p>
                 </div>
               </div>
