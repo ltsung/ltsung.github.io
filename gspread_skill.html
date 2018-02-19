@@ -69,8 +69,9 @@
                     always on the lookout for automating tasks. I saw an
                     opportunity to utilize the Google Spreadsheets API to parse
                     high volumes of utterances and expected responses to generate
-                    multiple barebones Alexa Skills in parallel. I use Node.js to output
-                    the interaction model and AWS Lambda functions needed for
+                    multiple barebones Alexa Skills in parallel. In conjunction with
+                    <a href="https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html" target="_blank">Amazon's Alexa Skills Kit CLI</a>,
+                    I use Node.js to output the interaction model and AWS Lambda functions needed for
                     Skill training. In this case study, I'll be demonstrating an
                     early version of my homemade tool.  This was the cornerstone to my
                     design and prototyping efforts for the <a href="./sports_yk.html">Crafting an NBA Q&amp;A Experience through Alexa project</a>.
@@ -88,11 +89,11 @@
               <div class="row">
                 <div class="col-sm-4">
                   <p>
-I wanted to create a workflow that enabled the entire team to brainstorm and design answers in a common tool: Google Spreadsheets seemed to be the best for
+I wanted to invent a workflow that enabled the entire team to brainstorm and design answers in a common tool: Google Spreadsheets seemed to be the best for
 parallel editing and visualizing text comparisons.  I also wanted to create an automation that stayed true to what is supported by the Alexa SDK in the case of needing to evolve the Skill prototypes themselves.
                   </p>
                   <p>
-My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with N possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible "turn".
+My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with <em>N</em> possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible "turn".
                   </p>
                 </div>
                 <div class="col-sm-8">
@@ -126,7 +127,7 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
               <div class="row">
                 <div class="col-sm-4">
                   <p>
-                    Here is the response handlers file, where I map canned responses to intents. For now, the script mainly considers very rudimentary vocal output (one can try inputting SSML tags for Alexa-supported speechcons), and does not yet handle card UI.
+                    Here is a snippet where I map canned responses to intents. For now, the script mainly considers very rudimentary vocal output (one can try inputting SSML tags for Alexa-supported speechcons), and does not yet handle card UI.
                   </p>
                 </div>
                 <div class="col-sm-8">
@@ -158,11 +159,11 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
           <br><br>
           <section>
             <div class="content">
-              <h2>Using Alexa SDK and AWS</h2>
+              <h2>Using ASK CLI for Deploying</h2>
               <div class="row">
                 <div class="col-sm-4">
                   <p>
-                    In under 5 minutes I can build new batches of Skills!  The work for the developer (and fellow stakeholders) is more in the planning and designing of the interactions!
+                    After overriding the default files in an ASK CLI template, we can deploy in under 5 minutes!  The work for the developer (and fellow stakeholders) is more in the planning and designing of the interactions!
                   </p>
                 </div>
                 <div class="col-sm-8">
