@@ -69,12 +69,15 @@
                     always on the lookout for automating tasks. I saw an
                     opportunity to utilize the Google Spreadsheets API to parse
                     high volumes of utterances and expected responses to generate
-                    multiple barebones Alexa Skills in parallel. In conjunction with
+                    multiple Alexa Skills. In conjunction with
                     <a href="https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html" target="_blank">Amazon's Alexa Skills Kit CLI</a>,
                     I use Node.js to output the interaction model and AWS Lambda functions needed for
                     Skill training. In this case study, I'll be demonstrating an
                     early version of my homemade tool.  This was the cornerstone to my
                     design and prototyping efforts for the <a href="./sports_yk.html">Crafting an NBA Q&amp;A Experience through Alexa project</a>.
+                    I also have been exchanging knowledge with different teams about my
+                    methods and working towards wider visibility and usage of this tool to scale
+                    to broader problem domains.
                   </p>
                 </div>
               </div>
@@ -184,13 +187,38 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
                 </div>
                 <div class="col-sm-4">
                   <p>
-                    If I'm not testing on my Echo device, I'm using Echosim.io for simulation.  After hooking up my Amazon account, I can easily access my Alexa Skill locally even if I haven't deployed to the Alexa Skill Store.
+                    Aside from the CLI and my Echo devices, I'm using Echosim.io for simulation.  After hooking up my Amazon account, I can easily access my Alexa Skill locally even if I haven't deployed to the Alexa Skill Store.
                   </p>
                 </div>
 
               </div>
             </div>
           </section>
+
+          <br><br>
+          <section>
+            <div class="content">
+              <h2>Distributing My Methods</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p>
+                    VUI has yet to catch on at large within my company, but I have
+                    spoken to designers, engineers, and product folks across different
+                    teams who have taken interest in the methods I've explored.
+                    Here is an example of a company brownbag where I detail the design
+                    principles and prototyping methods I developed alongside the User
+                    Research and natural language teams.
+                    </thead>
+                  </p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="port-item makeskill-i"></div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
 
         </div>
 
@@ -200,7 +228,7 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
             <div class="row">
               <div class="col-sm-8">
                 <ol>
-                  <li>This was a super effective method of rapid prototyping for basic VUI.  It allowed the team to test all of our flavors of utterances with little effort, compared to the manual and more cumbersome prototyping tools currently in existence. My goal is to support rapid prototyping of multimodality next.</li>
+                  <li>This was a super effective method of rapid prototyping for basic VUI.  It allowed the team to test all of our flavors of utterances with little effort, compared to the manual and more cumbersome prototyping tools currently in existence. My larger vision is to support multimodality and multi-turn use cases.</li>
                   <li>Given that my team of knowledge engineers have yet to delve into Alexa Skill making, I was able to provide early insight about the Alexa NLU and the technology suite in general.  Essentially, it kept us grounded with what's truly feasible.</li>
                   <li>I imagine that this is the beginning of streamlining workflows and enabling powerful expression for a designer.  This could be a helpful tool for non-programmers to map out their Skill design in Google Spreadsheets and interact with developers with more ease.</li>
                 </ol>
