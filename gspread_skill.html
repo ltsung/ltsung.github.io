@@ -65,16 +65,16 @@
               <div class="row">
                 <div class="col-sm-8">
                   <p class="header-type">
-                    As a prototyper interested in rapid experimentation, I'm
-                    always on the lookout for automating tasks. I saw an
-                    opportunity to utilize the Google Spreadsheets API to parse
+                    As a prototyper concerned about enabling rapid bulk experiments to uncover
+                    untapped opportunities, I did not see a sufficient VUI-based tool in the market
+                    that met my need. Instead, I saw this as an invitation to invent a tool that utilizes the Google Spreadsheets API to parse
                     high volumes of utterances and expected responses to generate
-                    multiple Alexa Skills. In conjunction with
-                    <a href="https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html" target="_blank">Amazon's Alexa Skills Kit CLI</a>,
-                    I use Node.js to output the interaction model and AWS Lambda functions needed for
-                    Skill training. In this case study, I'll be demonstrating an
-                    early version of my homemade tool.  This was the cornerstone to my
-                    design and prototyping efforts for the <a href="./sports_yk.html">Crafting an NBA Q&amp;A Experience through Alexa project</a>.
+                    multiple Alexa Skill rapid prototypes. I sought to make my method compatible with
+                    <a href="https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html" target="_blank">Amazon's Alexa Skills Kit CLI</a>
+                    to create and deploy batches of Skills in under 5 minutes.</p>
+                  <p class="header-type">
+                    This was the cornerstone to my design and prototyping efforts for the <a href="./sports_yk.html">Crafting an NBA Q&amp;A Experience through Alexa project</a>,
+                    and currently only supports 1-Turn interactions.
                     I also have been exchanging knowledge with different teams about my
                     methods and working towards wider visibility and usage of this tool to scale
                     to broader problem domains.
@@ -96,7 +96,7 @@ I wanted to invent a workflow that enabled the entire team to brainstorm and des
 parallel editing and visualizing text comparisons.  I also wanted to create an automation that stayed true to what is supported by the Alexa SDK in the case of needing to evolve the Skill prototypes themselves.
                   </p>
                   <p>
-My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with <em>N</em> possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible "turn".
+My script will parse a Google Spreadsheet and map one utterance (e.g. a user's question) with <em>N</em> possible answer variations. Each variation column is eventually translated into an Alexa Skill, where the intent, utterance, and answer rows represent a possible turn.
                   </p>
                 </div>
                 <div class="col-sm-8">
@@ -166,7 +166,7 @@ My script will parse a Google Spreadsheet and map one utterance (e.g. a user's q
               <div class="row">
                 <div class="col-sm-4">
                   <p>
-                    After overriding the default files in an ASK CLI template, we can deploy in under 5 minutes!  The work for the developer (and fellow stakeholders) is more in the planning and designing of the interactions!
+                    After overriding the default files in an ASK CLI template, we can deploy a Skill in a jiffy!  The work for the developer (and fellow stakeholders) is more in the planning and designing of the interactions!
                   </p>
                 </div>
                 <div class="col-sm-8">
